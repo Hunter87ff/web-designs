@@ -1,0 +1,130 @@
+@font-face{font-family:'san-bo';font-style:normal;font-weight:400;src:url("https://fontsfree.net//wp-content/fonts/basic/sans-serif/FontsFree-Net-ProductSans-Bold.ttf")format('ttf');}
+@font-face {font-family: jost; src: url(./font/jost-variable.ttf);}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&&family=PT+Sans+Narrow&family=Hind+Madurai&display=swap');
+
+
+:root {
+    /*  LAYOUT  */
+    --nav-height: 50px; 
+    --header-height:50px;
+    --footer-font-size: 16px;
+
+    /*  FILTER  */
+    --bright1: brightness(1);
+
+    /* FONT FAMILY */
+    --bebas:"bebas neue";
+    --bree:"bree serif";
+    --madurai:'Hind Madurai', sans-serif;
+    --poppins: 'Poppins', sans-serif;
+    --sans-narrow:'PT Sans Narrow', sans-serif;
+
+    /*  COLOR  */
+    --black: #000000;
+    --almost-black: #263238;
+    --white: #ffffff;
+    --almost-white: #FBFBFB;
+    --grey-light: #CFD8DC;
+    --grey: #363636;
+    --grey-medium: #78909C;
+    --grey-dark: #455A64;
+    --primary: #1E88E5;
+    --primary-dark: #1976D2;
+    --secondary: #CFD8DC;
+    --secondary-dark: #B0BEC5;
+    --red: #EF4836;
+    --cyan:cyan;
+    --tcyan:rgb(61, 193, 245);
+  }
+
+::-webkit-progress-value {
+  background-color: #00ff1e;
+}
+
+::-webkit-progress-bar {
+  background-color: #0de3f2;
+}
+
+
+
+*{
+    padding: 0;
+    margin:0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background: url(../img/bg/background.jpg) no-repeat center center fixed;
+    margin: 5px;
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none !important;
+}
+.header{
+    background-color: #ffffff00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.header .header-logo{
+    color: #fff;
+    background-color: #ffffff00;
+    z-index: 999;
+    position: relative;
+}
+
+.container{
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 20px;
+    flex-direction: row;
+}
+.content{
+    position: absolute;
+    left: 0;
+    top: 40%;
+    margin-left: 5rem;
+
+}
+.content *{
+    color: #fff;
+}
+.send-btn{
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 78px;
+    background: linear-gradient(145deg, #81b3fd, #6d96d4);
+    box-shadow:  5px 5px 12px #5677a8,
+                 -5px -5px 12px #9cd7ff;
+}
+
+
+
+.poster_img{
+    position: absolute;
+    right: 0;
+    top: 30%;
+}
