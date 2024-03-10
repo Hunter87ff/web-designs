@@ -18,3 +18,44 @@ function menu_toggle(){
     sel('.menu').classList.toggle('active');
     sel('#menu_btn').classList.toggle('rotate');
 }
+
+function checkout(e){
+    var chk = sel('.checkout');
+    chk.style.display = 'flex';
+    sel("#submit_btn").name = e.name;
+}
+
+function cancel_checkout(){sel('.checkout').style.display = 'none';}
+
+var products = sel('.products');
+fetch('../static/js/products.json')
+.then(response => response.json())
+.then(data => {
+    data.forEach(element => {
+        // console.log(element);
+        var elm = document.createElement('div');
+        elm.classList.add('product');
+        elm.innerHTML = `<img src="${element.img}" alt="product">
+        <h3>${element.name}</h3>
+        <!--<p>${element.price}</p>-->
+        <div style="display: flex; " class="btns">
+            <button class="btn">Add To Cart</button>
+            <button name=${element.prod_name} onclick="checkout(this)" class="btn">Rent</button>
+        </div>`;
+        console.log(elm.prod_name);
+        products.appendChild(elm);
+    });
+    sel('.loader').style.display = 'none';
+});
+
+sel("#days").addEventListener("input", function(){
+    sel("#days_val").innerText = `${350*this.value}/${this.value} Days`;
+});
+
+sel(".confirmation").addEventListener("click", function(){
+    if(sel("#agree").checked){
+        sel("#submit_btn").style.display = "block";
+    }if(!sel("#agree").checked){
+        sel("#submit_btn").style.display = "none";
+    }
+});
