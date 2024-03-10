@@ -15,7 +15,6 @@
 	<!-- LINK RESOURCES -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&&family=PT+Sans+Narrow&family=Hind+Madurai&family=Pacifico&family=Bree+Serif&family=Bebas+Neue&display=swap">
-
     <title>Camrent</title>
 </head>
 <body>
@@ -30,51 +29,29 @@
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="login.html">Login</a></li>
+                    <li><a href="login.html">View Cart</a></li>
                 </ul>
         </div>
         <div class="main">
             <!-- <div class="banner"><img src="../static/img/banner/banner1.jpg" alt=""></div> -->
+    
             <div class="products">
-                <div class="product">
-                    <img src="../static/img/banner/banner1.jpg" alt="">
-                    <h3>Camera</h3>
-                    <p>Camera Description</p>
-                                        <div style="display: flex; " class="btns">
-                        <button class="btn">Add To Cart</button>
-                        <button class="btn">Rent</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="https://i1.adis.ws/i/canon/eos-r6-mark-ii-lifestyle-45-16x9-hero_c2336c777a564e06a17e3db9cf917431?$hero-header-half-16by9-dt-jpg$" alt="">
-                    <h3>Lens</h3>
-                    <p>Lens Description</p>
-                                        <div style="display: flex; " class="btns">
-                        <button class="btn">Add To Cart</button>
-                        <button class="btn">Rent</button>
-                    </div>
-                </div>
-                <div class="product">
-                    <img src="https://vortexoptics.com/media/catalog/product/v/t/vtx_tri_highcountry2_spottingscope_hero_w.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=" alt="">
-                    <h3>Tripod</h3>
-                    <p>Tripod Description</p>
-                    <div style="display: flex; " class="btns">
-                        <button class="btn">Add To Cart</button>
-                        <button class="btn">Rent</button>
-                        
-                    </div>
-                    
-                </div>
-                <div class="product">
-                    <img src="https://static.bhphotovideo.com/explora/sites/default/files/04-TTL-Flash.jpg" alt="">
-                    <h3>Flash</h3>
-                    <p>Flash Description</p>
-                                        <div style="display: flex; " class="btns">
-                        <button class="btn">Add To Cart</button>
-                        <button class="btn">Rent</button>
-                    </div>
-                </div>
+                <div class="loader">Loading...</div>
+                <form action="./rent" class="checkout">
+                    <label for="name">Enter Your Name</label>
+                    <input type="text" placeholder="Enter Your Name" name="name" id="name">
+                    <label for="phone">Enter Your Phone Number</label>
+                    <input type="tel" placeholder="Enter Your Phone Number" name="phone" id="phone">
+                    <label for="file">Upload Your Legal Identity(Adhar/Pan)</label>
+                    <input type="file" name="file" id="file">
+                    <label for="days">Enter Days(Rs. 350/day)</label>
+                    <input type="range" name="days" value="1" min="1" max="10" id="days"><span>Payable : <span id="days_val">350/1 Days</span></span>
+                    <div class="confirmation"><input type="checkbox" name="agree" id="agree"><span id="check_item_name">Are You Sure To Rent This Item</span></div>
+                    <button style="display: none; " id="submit_btn" type="submit">Place Order</button>
+                    <input onclick="cancel_checkout()" style="padding: 5px; color: white; background: red; border: none;" type="button" value="Cancel">
+                </form>
             </div>
+            <script src="../static/js/main.js"></script>
         <div class="footer">
                 <div class="footer-section about">
                     <h1 class="logo">Camrent</h1>
@@ -89,6 +66,5 @@
                 </div>
         </div>
     </div>
-<script src="../static/js/main.js"></script>
 </body>
 </html>
