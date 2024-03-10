@@ -23,6 +23,7 @@ function checkout(e){
     var chk = sel('.checkout');
     chk.style.display = 'flex';
     sel("#submit_btn").name = e.name;
+    sel("#check_item_name").innerText = `Are You Sure To Rent ${e.name.replace("_"," ").toUpperCase()}?`;
 }
 
 function cancel_checkout(){sel('.checkout').style.display = 'none';}
