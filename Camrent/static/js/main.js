@@ -18,10 +18,12 @@ function menu_toggle(){
     sel('.menu').classList.toggle('active');
     sel('#menu_btn').classList.toggle('rotate');
 }
-
+var prc = 0;
 function checkout(e){
     var chk = sel('.checkout');
     chk.style.display = 'flex';
+    sel("#lb_days").innerHTML = `Enter Days(Rs. ${e.dataset.price}/day)`;
+    prc = e.dataset.price;
     sel("#submit_btn").name = e.name;
     sel("#check_item_name").innerText = `Are You Sure To Rent ${e.name.replace("_"," ").toUpperCase()}?`;
 }
@@ -41,16 +43,15 @@ fetch('../static/js/products.json')
         <!--<p>${element.price}</p>-->
         <div style="display: flex; " class="btns">
             <button class="btn">Add To Cart</button>
-            <button name=${element.prod_name} onclick="checkout(this)" class="btn">Rent</button>
+            <button data-price=${element.price} name=${element.prod_name} onclick="checkout(this)" class="btn">Rent</button>
         </div>`;
-        console.log(elm.prod_name);
         products.appendChild(elm);
     });
     sel('.loader').style.display = 'none';
 });
 
 sel("#days").addEventListener("input", function(){
-    sel("#days_val").innerText = `${350*this.value}/${this.value} Days`;
+    sel("#days_val").innerText = `${prc*this.value}/${this.value} Days`;
 });
 
 sel(".confirmation").addEventListener("click", function(){

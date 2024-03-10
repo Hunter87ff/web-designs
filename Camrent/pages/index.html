@@ -44,10 +44,10 @@
                     <input type="tel" placeholder="Enter Your Phone Number" name="phone" id="phone">
                     <label for="file">Upload Your Legal Identity(Adhar/Pan)</label>
                     <input type="file" name="file" id="file">
-                    <label for="days">Enter Days(Rs. 350/day)</label>
+                    <label id="lb_days" for="days">Enter Days(Rs. 350/day)</label>
                     <input type="range" name="days" value="1" min="1" max="10" id="days"><span>Payable : <span id="days_val">350/1 Days</span></span>
                     <div class="confirmation"><input type="checkbox" name="agree" id="agree"><span id="check_item_name">Are You Sure To Rent This Item</span></div>
-                    <button style="display: none; " id="submit_btn" type="submit">Place Order</button>
+                    <button  style="display: none; " id="submit_btn" type="submit">Place Order</button>
                     <input onclick="cancel_checkout()" style="padding: 5px; color: white; background: red; border: none;" type="button" value="Cancel">
                 </form>
             </div>

@@ -1,7 +1,7 @@
 [
     {
         "name": "DSLR Camera",
-        "price": 100,
+        "price": 400,
         "img": "../static/img/banner/banner1.jpg",
         "prod_name": "dslr_cam"
     },
