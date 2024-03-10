@@ -24,6 +24,7 @@ function checkout(e){
     chk.style.display = 'flex';
     sel("#lb_days").innerHTML = `Enter Days(Rs. ${e.dataset.price}/day)`;
     prc = e.dataset.price;
+    sel("#days_val").innerHTML = `${prc*sel("#days").value}/${sel("#days").value} Days`;
     sel("#submit_btn").name = e.name;
     sel("#check_item_name").innerText = `Are You Sure To Rent ${e.name.replace("_"," ").toUpperCase()}?`;
 }
