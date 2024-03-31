@@ -1,7 +1,7 @@
 [
     {
         "name": "DSLR Camera",
-        "price": 400,
+        "price": 450,
         "img": "../static/img/banner/banner1.jpg",
         "prod_name": "dslr_cam"
     },
@@ -13,13 +13,13 @@
     },
     {
         "name": "Camera Flash",
-        "price": 50,
+        "price": 150,
         "img": "https://static.bhphotovideo.com/explora/sites/default/files/04-TTL-Flash.jpg",
         "prod_name": "camera_flash"
     },
     {
         "name": "Camera Tripod",
-        "price": 300,
+        "price": 250,
         "img": "https://vortexoptics.com/media/catalog/product/v/t/vtx_tri_highcountry2_spottingscope_hero_w.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=",
         "prod_name": "camera_tripod"
     }
