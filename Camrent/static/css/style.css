@@ -229,4 +229,8 @@ a{
         color: #fff;
         /* transition: 0.5s; */
     }
+    .checkout{
+        width: 90vw;
+        height: 100vh;
+    }
 }
