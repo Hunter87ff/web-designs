@@ -20,21 +20,24 @@
 <body>
     <div class="container">
         <div class="header bg-gray-800 text-white py-5">
-            <span  class="logo text-white text-lg font-bold">Camrent</span>
+            <div class="logo">
+                <span  class="text-white text-lg font-bold">Camrent</span> <br>
+                <span onclick="sel('#bhadrakMap').classList.toggle('showb');" style="font-size: 12px; cursor: pointer;">Only Available In Bhadrak, Odisha</span>
+            </div>
             <i id="menu_btn" style="font-size: 40px; transition: 0.5s;" onclick="menu_toggle()" class="fa-solid fa-bars"></i>
                 <ul class="menu">
                     <li style="display: flex; flex-direction: row;"><input  style="margin-right: 5px;" type="text" name="search_inp" placeholder=" Search Product" id="">
                     <button style="background: #108d05; color: #fff; margin-right: 10px;"><i class="fa-solid fa-magnifying-glass" style="padding: 10px;"></i></button></li>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="login.html">View Cart</a></li>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About</li></a>
+                    <a href="contact.html"><li>contact</li></a>
+                    <a href="products.html"><li>Products</li></a>
+                    <a href="login.html"><li>View Cart</li></a>
                 </ul>
         </div>
         <div class="main">
             <!-- <div class="banner"><img src="../static/img/banner/banner1.jpg" alt=""></div> -->
-    
+            <iframe style="position: fixed;" id="bhadrakMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119153.23279525075!2d86.42021653611364!3d21.05114303659231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1bf587cd8ce1f1%3A0x820d86656eae5320!2sBhadrak%2C%20Odisha!5e0!3m2!1sen!2sin!4v1711885767038!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="products">
                 <div class="loader">Loading...</div>
                 <form action="./rent" class="checkout">
@@ -60,7 +63,8 @@
                     </p>
                     <div class="border"></div>
                     <div class="contact">
-                        <span><i class="fas fa-phone"></i> 123-456-789</span> <br>
+                        <span><i class="fas fa-phone"></i> +91 7735269381</span> <br>
+                        <span><i class="fas fa-location"></i> Bhadrak, Odisha</span><br>
                         <span><i class="fas fa-envelope"></i> support@camrent.live</span>
                     </div>
                 </div>
