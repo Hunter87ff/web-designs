@@ -105,6 +105,40 @@ a{
     border: 1px solid #000;
     width: 50%;
 }
+.addedCart{
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    transition: 0.5s;
+    transform: translateY(-300%);
+}
+.addedCart img{
+    max-height: 50px;
+    max-width: 50px;
+}
+/* it is basically an animation class which will animate a perticular noticication from top to lower smoothly */
+.slideDown{
+    display: flex;
+    animation: slideDown 1.5s ease!important;
+}
+@keyframes slideDown{
+    0%{
+        transform: translateY(-200%);
+    }
+    50%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(-300%);
+        display: none;
+    }
+}
+
 
 /* DESKTOP VIEW */
 @media (min-width: 768px){
@@ -246,7 +280,7 @@ a{
     .footer{
         bottom: 0;
         padding: 1rem;
-        margin-bottom: auto;
+        margin-top: auto;
     }
     .footer .about{
         display: flex;

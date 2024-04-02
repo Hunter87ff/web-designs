@@ -9,8 +9,6 @@ const cart = JSON.parse(localStorage.getItem('cart'));
 
 function removeCart(e){
     var cart_items = sel('.cart-items');
-    console.log(e.dataset.obj_count);
-    console.log(e.dataset.obj);
     data = cart[e.dataset.obj_count];
     cart.splice(parseInt(e.dataset.obj_count), 1);
     localStorage.setItem('cart', JSON.stringify(cart));

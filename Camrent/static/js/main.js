@@ -4,6 +4,13 @@ function addClass(class_id, class_name){return class_id.classList.add(class_name
 function removeClass(class_id, class_name){return class_id.classList.remove(class_name);}
 function toggleClass(class_id, class_name){return class_id.classList.toggle(class_name);}
 
+// function that will take int input and sleep for that time
+function sleep(second) {
+    return new Promise(resolve => setTimeout(resolve, second*1000));
+}
+
+
+
 sel(".main").addEventListener("click", function(e){
     let map = sel("#bhadrakMap");
     if(map.classList.contains("showb")){
@@ -39,6 +46,11 @@ function addCart(e){
         if(cart.length>7){alert('You can only add 8 items to cart'); return;}
         cart.push(data);}
     localStorage.setItem('cart', JSON.stringify(cart));
+    let addedCart = sel(".addedCart");
+    addedCart.classList.add("slideDown");
+    sleep(1).then(() => {
+        addedCart.classList.remove("slideDown");
+    });
 }
 function cancel_checkout(){sel('.checkout').style.display = 'none';}
 
