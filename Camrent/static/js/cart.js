@@ -29,7 +29,7 @@ function removeCart(e){
 }
 
 function cartDay(e){
-    console.log(e);
+    // console.log(e);
     let cart = JSON.parse(localStorage.getItem('cart'));
     let _total = sel('#cart-total');
     let price = 0;
@@ -56,16 +56,16 @@ if(cart){
         var elm = document.createElement('div');
         elm.classList.add('cart-item');
         elm.id = `cart-item-${obj_count}`;
+        var option = ``;
+        for(let i=1; i<=10; i++){
+            // console.log(`i: ${i} element.days: ${element.days}`);
+            option+=`<option ${i==element.days?'selected':''} value="${i}">${i} Days</option>`}
         elm.innerHTML = `<img src="${element.img}" alt="product">
         <div class="cart-item-info">
         <h3>${element.name} <span class='product-price'>₹${element.price}</span></h3>
         <p id='cart-day-${obj_count}-${element.prod_name}'>${element.days} day</p>
         <select data-count=${obj_count} data-prod_name=${element.prod_name} class="btn name="days" id="days" onchange="cartDay(this)">
-        <option value="1">1 Day</option>
-        <option value="2">2 Days</option>
-        <option value="3">3 Days</option>
-        <option value="4">4 Days</option>
-        <option value="5">5 Days</option>
+        ${option}
         </select>
         <button data-obj_count=${obj_count} class="btn" onclick="removeCart(this)">Remove</button>
         </div>`;
