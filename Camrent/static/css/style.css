@@ -124,7 +124,7 @@ a{
     
     }
     .container{
-        max-width: 100vw;
+        width: 100%;
         overflow: hidden;
         position: absolute;
         min-height: 100vh;
@@ -186,6 +186,18 @@ a{
         padding: 1rem;
     }
 
+}
+.cart-info{
+    border-radius: 6px;
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 10px;
+}
+.cart-buy{
+    background: yellow;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
 }
 .footer{
     background-color: var(--main-color);
@@ -327,5 +339,8 @@ a{
     .checkout{
         width: 90vw;
         height: 100vh;
+    }
+    .footer{
+        position: absolute;
     }
 }

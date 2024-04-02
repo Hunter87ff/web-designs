@@ -43,6 +43,7 @@ function addCart(e){
 function cancel_checkout(){sel('.checkout').style.display = 'none';}
 
 var products = sel('.products');
+if(products){
 fetch('../static/js/products.json')
 .then(response => response.json())
 .then(data => {
@@ -60,7 +61,7 @@ fetch('../static/js/products.json')
     });
     sel('.loader').style.display = 'none';
 });
-
+}
 sel("#days").addEventListener("input", function(){
     sel("#days_val").innerText = `${prc*this.value}/${this.value} Days`;
 });
