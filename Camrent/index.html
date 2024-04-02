@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="./static/css/style.css">
 	<!--Theme Color-->
 	<meta content='#fefefe' name='theme-color'/>
 	<meta content='#fefefe' name='msapplication-navbutton-color'/>
@@ -37,13 +37,9 @@
         <div class="main">
             <!-- <div class="banner"><img src="../static/img/banner/banner1.jpg" alt=""></div> -->
             <iframe style="position: fixed;" id="bhadrakMap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119153.23279525075!2d86.42021653611364!3d21.05114303659231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1bf587cd8ce1f1%3A0x820d86656eae5320!2sBhadrak%2C%20Odisha!5e0!3m2!1sen!2sin!4v1711885767038!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div class="cart-info"> <!--products-->
-                <h2>Subtotal(<span id="cart-count">0</span> items):  <span id="cart-total">0</span>$</h2>
-                <button class="cart-buy">Process to Buy</button>
-            </div>
-            <div class="cart-items">
+            <div class="products">
                 <div class="loader">Loading...</div>
-                <!-- <form action="./rent" class="checkout">
+                <form action="./rent" class="checkout">
                     <label for="name">Enter Your Name</label>
                     <input type="text" placeholder="Enter Your Name" name="name" id="name">
                     <label for="phone">Enter Your Phone Number</label>
@@ -55,10 +51,9 @@
                     <div class="confirmation"><input type="checkbox" name="agree" id="agree"><span id="check_item_name">Are You Sure To Rent This Item</span></div>
                     <button  style="display: none; " id="submit_btn" type="submit">Place Order</button>
                     <input onclick="cancel_checkout()" style="padding: 5px; color: white; background: red; border: none;" type="button" value="Cancel">
-                </form> -->
+                </form>
             </div>
-            <script src="../static/js/main.js"></script>
-            <script src="../static/js/cart.js"></script>
+            <script src="./static/js/main.js"></script>
     </div>
     <div class="footer">
         <div class="footer-section about">

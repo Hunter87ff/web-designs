@@ -2,7 +2,7 @@
     {
         "name": "DSLR Camera",
         "price": 450,
-        "img": "../static/img/banner/banner1.jpg",
+        "img": "./static/img/banner/banner1.jpg",
         "prod_name": "dslr_cam"
     },
     {

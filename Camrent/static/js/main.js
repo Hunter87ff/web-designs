@@ -27,7 +27,7 @@ function checkout(e){
 }
 
 function addCart(e){
-    data = {name: e.name, price: e.dataset.price};
+    data = {name:e.dataset.pname, prod_name: e.name, price: e.dataset.price, days: 1, img: e.dataset.img};
     var cart = localStorage.getItem('cart');
     if(cart == null){
         cart = [];
@@ -36,7 +36,7 @@ function addCart(e){
     else{
         cart = JSON.parse(cart);
         if(cart.includes(data)){alert('Already Added'); return;}
-        if(cart.length>4){alert('You can only add 5 items to cart'); return;}
+        // if(cart.length>4){alert('You can only add 5 items to cart'); return;}
         cart.push(data);}
     localStorage.setItem('cart', JSON.stringify(cart));
 }
@@ -44,7 +44,7 @@ function cancel_checkout(){sel('.checkout').style.display = 'none';}
 
 var products = sel('.products');
 if(products){
-fetch('../static/js/products.json')
+fetch('./static/js/products.json')
 .then(response => response.json())
 .then(data => {
     data.forEach(element => {
@@ -54,7 +54,7 @@ fetch('../static/js/products.json')
         <h3>${element.name}</h3>
         <!--<p>${element.price}</p>-->
         <div style="display: flex; " class="btns">
-            <button data-price=${element.price} name=${element.prod_name} onclick="addCart(this)" class="btn">Add To Cart</button>
+            <button data-pname="${element.name}"  data-price=${element.price} data-img=${element.img} name=${element.prod_name} onclick="addCart(this)" class="btn">Add To Cart</button>
             <button data-price=${element.price} name=${element.prod_name} onclick="checkout(this)" class="btn">Rent</button>
         </div>`;
         products.appendChild(elm);
@@ -62,14 +62,22 @@ fetch('../static/js/products.json')
     sel('.loader').style.display = 'none';
 });
 }
-sel("#days").addEventListener("input", function(){
+ var days = sel("#days");
+ if(days){
+    days.addEventListener("input", function(){
     sel("#days_val").innerText = `${prc*this.value}/${this.value} Days`;
 });
+ }
+try {
+    sel(".confirmation").addEventListener("click", function(){
+        if(sel("#agree").checked){
+            sel("#submit_btn").style.display = "block";
+        }if(!sel("#agree").checked){
+            sel("#submit_btn").style.display = "none";
+        }
+    });
+} catch (error) {
+    console.log(error);
+}
 
-sel(".confirmation").addEventListener("click", function(){
-    if(sel("#agree").checked){
-        sel("#submit_btn").style.display = "block";
-    }if(!sel("#agree").checked){
-        sel("#submit_btn").style.display = "none";
-    }
-});
+console.clear();
