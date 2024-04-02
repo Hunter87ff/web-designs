@@ -117,6 +117,7 @@ a{
     transition: 1.5s;
     z-index: 999;
     transform: translateY(-300%);
+    position: fixed;
 }
 .addedCart img{
     max-height: 50px;
