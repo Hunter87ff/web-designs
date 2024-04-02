@@ -35,10 +35,20 @@ function cartDay(e){
     let price = 0;
     let _days = sel(`#cart-day-${e.dataset.count}-${e.dataset.prod_name}`);
     cart[e.dataset.count].days = e.value;
-    price += cart[e.dataset.count].price*e.value;
-    _total.innerHTML = price;
+    // if(cart[e.dataset.count].days>e.value){
+    //     let decreased = cart[e.dataset.count].days-e.value;
+    //     price = cart[e.dataset.count].price*decreased;
+    //     _total.innerHTML = parseInt(_total.innerHTML)-price;
+    // }
+    // else{
+    //     let increased = e.value-cart[e.dataset.count].days;
+    //     price = cart[e.dataset.count].price*increased;
+    //     _total.innerHTML = parseInt(_total.innerHTML)+price;
+    // }
+    
     _days.innerHTML = `${e.value} day`;
     localStorage.setItem('cart', JSON.stringify(cart));
+    reloadPage();
 }
 
 
