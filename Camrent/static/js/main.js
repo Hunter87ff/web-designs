@@ -36,7 +36,7 @@ function addCart(e){
     else{
         cart = JSON.parse(cart);
         if(cart.includes(data)){alert('Already Added'); return;}
-        // if(cart.length>4){alert('You can only add 5 items to cart'); return;}
+        if(cart.length>7){alert('You can only add 8 items to cart'); return;}
         cart.push(data);}
     localStorage.setItem('cart', JSON.stringify(cart));
 }
