@@ -7,13 +7,38 @@ function toggleClass(class_id, class_name){return class_id.classList.toggle(clas
 
 const cart = JSON.parse(localStorage.getItem('cart'));
 
-// const cart = [
-// {"name":"DSLR Camera","prod_name":"dslr_cam","price":"450","days":1,"img":"../static/img/banner/banner1.jpg"},
-// {"name":"Camera Lens","prod_name":"camera_lens","price":"200","days":1,"img":"https://i1.adis.ws/i/canon/eos-r6-mark-ii-lifestyle-45-16x9-hero_c2336c777a564e06a17e3db9cf917431?$hero-header-half-16by9-dt-jpg$"},
-// {"name":"Camera Flash","prod_name":"camera_flash","price":"150","days":1,"img":"https://static.bhphotovideo.com/explora/sites/default/files/04-TTL-Flash.jpg"}
-
 function removeCart(e){
+    var cart_items = sel('.cart-items');
+    console.log(e.dataset.obj_count);
+    console.log(e.dataset.obj);
+    data = cart[e.dataset.obj_count];
+    cart.splice(parseInt(e.dataset.obj_count), 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    sel("#cart-count").innerHTML = cart.length;
+    cart_items.removeChild(sel(`#cart-item-${e.dataset.obj_count}`));
+    let price = 0;
+    let _total = sel('#cart-total');
+    if(cart.length == 0){
+        sel('.cart-items').innerHTML = '<h1>No Items In Cart</h1>';
+        _total.innerHTML = price;
+    }
+    cart.forEach(element => {
+        price += element.price*element.days;
+        _total.innerHTML = price;
+    });
+}
+
+function cartDay(e){
     console.log(e);
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    let _total = sel('#cart-total');
+    let price = 0;
+    let _days = sel(`#cart-day-${e.dataset.count}-${e.dataset.prod_name}`);
+    cart[e.dataset.count].days = e.value;
+    price += cart[e.dataset.count].price*e.value;
+    _total.innerHTML = price;
+    _days.innerHTML = `${e.value} day`;
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 
@@ -22,6 +47,7 @@ if(!cart){
     sel('.cart-items').innerHTML = '<h1>No Items In Cart</h1>';
 }
 if(cart){
+    let obj_count = 0;
     let price = 0;
     let _total = sel('#cart-total')
     sel("#cart-count").innerHTML = cart.length;
@@ -29,11 +55,21 @@ if(cart){
     cart.forEach(element => {
         var elm = document.createElement('div');
         elm.classList.add('cart-item');
+        elm.id = `cart-item-${obj_count}`;
         elm.innerHTML = `<img src="${element.img}" alt="product">
-        <h3>${element.name}</h3>
-        <p>₹${element.price}</p>
-        <p>${element.days} day</p>
-        <button class="btn" onclick="removeCart()">Remove</button>`;
+        <div class="cart-item-info">
+        <h3>${element.name} <span class='product-price'>₹${element.price}</span></h3>
+        <p id='cart-day-${obj_count}-${element.prod_name}'>${element.days} day</p>
+        <select data-count=${obj_count} data-prod_name=${element.prod_name} class="btn name="days" id="days" onchange="cartDay(this)">
+        <option value="1">1 Day</option>
+        <option value="2">2 Days</option>
+        <option value="3">3 Days</option>
+        <option value="4">4 Days</option>
+        <option value="5">5 Days</option>
+        </select>
+        <button data-obj_count=${obj_count} class="btn" onclick="removeCart(this)">Remove</button>
+        </div>`;
+        obj_count += 1;
         cart_items.appendChild(elm);
         price += element.price*element.days;
         _total.innerHTML = price;

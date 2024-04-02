@@ -2,8 +2,6 @@
 Author : Hunter87 
 Github : github.com/hunter87ff
 */
-
-
 *{
     margin: 0;
     padding: 0;
@@ -103,6 +101,10 @@ a{
     color: #fff;
     cursor: pointer;
 }
+.border{
+    border: 1px solid #000;
+    width: 50%;
+}
 
 /* DESKTOP VIEW */
 @media (min-width: 768px){
@@ -193,34 +195,38 @@ a{
     .cart-items {
         display: flex;
         flex-wrap: wrap;
-        justify-content: flex-start; /* Adjust as needed */
+        /* justify-content: flex-start; */
         align-items: center;
         margin: 5px;
         max-width: 60%;
         background: #e0e0e0;
         overflow-x: auto;
-        overflow-y: scroll;
         height: auto;
         float: left;
     }
     
     .cart-item {
-        flex: 0 0 calc(25%); /* Adjust the width of each item */
-        margin: 5px; /* Adjust margin between items */
-        /* Add additional styles for cart items */
+        /* flex: 0 0 calc(20%); */
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: row;
         margin: 5px;
         padding: 10px;
         background-color: #f4f4f4;
-        width: 90%;
         flex-wrap: wrap;
     }
     .cart-item img{
-        max-height: 70%;
-        max-width: 100%;
+        max-height: 30%;
+        max-width: 30%;
+        margin-right: auto;
+        margin: 5px;
+    }
+    .cart-item-info{
+        width: 60%;
+        margin-left: auto;
+    }
+    .product-price{
+        margin-right: auto;
+        float: right;
     }
     .cart-item .btn{
         background: transparent;
@@ -235,15 +241,12 @@ a{
     .cart-item .btn:hover{
         background-color: #111107;
         color: #fff;
-        /* transition: 0.5s; */
     }
 
-
-
     .footer{
-        /* position: absolute; */
         bottom: 0;
         padding: 1rem;
+        margin-bottom: auto;
     }
     .footer .about{
         display: flex;
@@ -419,10 +422,22 @@ a{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin: 5px;
+        padding: 10px;
+        width: 100%;
+    }
+    .cart-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
         padding: 10px;
         background-color: #f4f4f4;
-        width: 100%;
+        width: 80%;
+        margin: 5px;
+    }
+    .product-price{
+        margin-right: auto;
+        float: right;
     }
     .cart-info{
         width: 90%;
@@ -442,6 +457,10 @@ a{
         background-color: #111107;
         color: #fff;
         /* transition: 0.5s; */
+    }
+    .mborder{
+        border: 1px solid #000;
+        width: 50%;
     }
 
 }
