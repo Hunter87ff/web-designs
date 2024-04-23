@@ -154,6 +154,7 @@ a{
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
     .cource-block{
         flex-direction: column;
@@ -162,10 +163,12 @@ a{
         padding: 20px;
         width: 100%;
         align-items: center;
+        text-align: center;
     }
     .cource-block div{
         /* margin-right: auto; */
         align-items: center;
+        text-align: center;
     }
 
     
