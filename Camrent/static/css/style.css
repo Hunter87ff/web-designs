@@ -126,19 +126,12 @@ a{
 /* it is basically an animation class which will animate a perticular noticication from top to lower smoothly */
 .slideDown{
     display: flex;
-    animation: slideDown 1.5s ease!important;
+    animation: slideDown 3.5s ease-in-out!important;
 }
 @keyframes slideDown{
-    0%{
-        transform: translateY(-200%);
-    }
-    50%{
-        transform: translateY(-100%);
-    }
-    100%{
-        transform: translateY(-300%);
-        display: none;
-    }
+    0%{transform: translateY(-200%);}
+    1%, 99%{transform: translateY(-100%); transition: 3s;}
+    100%{transform: translateY(-300%);display: none;}
 }
 
 
