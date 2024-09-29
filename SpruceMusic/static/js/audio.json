@@ -1,18 +1,18 @@
 [
     {
+        "name" : "Baarish",
+        "author" : "Arijit Singh",
+        "src" : "static/audio/Baarish.mp3",
+        "duration" : "6:15",
+        "thumbnail" : "https://i.ytimg.com/vi/Qvd-I7lTecI/maxresdefault.jpg",
+        "tags" : ["Baarish", "Yaariyaan", "Arijit Singh"]
+    },
+    {
         "name" : "Tum hi ho",
         "author" : "Arijit Singh",
         "src" : "https://www.pagalworld.com.co/files/download/id/16890",
         "duration" : "4:24",
         "thumbnail" : "https://www.pagalworld.us/_big/aashiqui-2-2013-250.jpg",
         "tags" : ["Tum hi ho", "Aashiqui 2", "Arijit Singh"]
-    }, 
-    {
-        "name" : "Baarish",
-        "author" : "Arijit Singh",
-        "src" : "static/audio/Baarish.mp3",
-        "duration" : "4:35",
-        "thumbnail" : "https://i.ytimg.com/vi/Qvd-I7lTecI/maxresdefault.jpg",
-        "tags" : ["Baarish", "Yaariyaan", "Arijit Singh"]
     }
 ]
