@@ -48,6 +48,7 @@ class Player{
         this.audio.onpause = ()=>{this.playBtn.classList.replace("bx-pause", "bx-play");}
 
         this.audio.addEventListener("timeupdate", () => {
+            localStorage.setItem("currentTime", this.audio.currentTime);
             this.current_time.innerText = this.formatedTime(this.audio.currentTime);
             this.progressBar.value = this.audio.currentTime;
         });
@@ -66,6 +67,7 @@ class Player{
         this.playerTrack.banner.src = audioObj.thumbnail;
         this.playerTrack.currentSong.innerText = audioObj.name.slice(0, 20) + (audioObj.name.length>20?"...":"");
         this.playerTrack.currentTime.innerText = audioObj.duration;
+
         // this.playerTrack.currentDuration.innerText = audioObj.duration;
     }
     
@@ -134,3 +136,9 @@ class Player{
 
 let player = new Player();
 player.render();
+window.onload = () => {
+    player.audio.currentTime = localStorage.getItem("currentTime") || 0;
+    player.current_time.innerText = player.formatedTime();
+    player.progressBar.value = player.audio.currentTime;
+    player.progressBar.max = player.audio.duration;
+};
