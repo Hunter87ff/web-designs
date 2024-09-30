@@ -28,7 +28,7 @@
         "name" : "Chaleya",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Chaleya.mp3",
-        "duration" : "3:00",
+        "duration" : "0:44",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Chaleya", "Anushka Gautam", "Cover"]
     },
@@ -36,7 +36,7 @@
         "name" : "Dekh Lo",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Dekh lo.mp3",
-        "duration" : "4:00",
+        "duration" : "1:29",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Dekh Lo", "Anushka Gautam", "Cover"]
     },
@@ -44,7 +44,7 @@
         "name" : "Dil Ibadat",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Dil ibadat.mp3",
-        "duration" : "4:30",
+        "duration" : "0:58",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Dil Ibadat", "Anushka Gautam", "Cover"]
         },
@@ -52,7 +52,7 @@
         "name" : "Husn",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Husn.mp3",
-        "duration" : "3:45",
+        "duration" : "0:54",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Husn", "Anushka Gautam", "Cover"]
         },
@@ -60,7 +60,7 @@
         "name" : "Phirta Rahoon",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/phirta rahoon.m4a",
-        "duration" : "4:10",
+        "duration" : "0:56",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Phirta Rahoon", "Anushka Gautam", "Cover"]
         },
@@ -68,7 +68,7 @@
         "name" : "Sabse Pehle Hai Pyaar",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Sabse pehle hai pyaar.mp3",
-        "duration" : "3:50",
+        "duration" : "0:48",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Sabse Pehle Hai Pyaar", "Anushka Gautam", "Cover"]
         },
@@ -76,7 +76,7 @@
         "name" : "Saudebaazi",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Saudebaazi.mp3",
-        "duration" : "4:20",
+        "duration" : "1:00",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Saudebaazi", "Anushka Gautam", "Cover"]
         },
@@ -84,7 +84,7 @@
         "name" : "Tujh Ko Jo Paya",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Tujh ko jo paya.mp3",
-        "duration" : "4:00",
+        "duration" : "1:29",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Tujh Ko Jo Paya", "Anushka Gautam", "Cover"]
         },
@@ -92,7 +92,7 @@
         "name" : "Tum Mile",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Tum mile.mp3",
-        "duration" : "4:30",
+        "duration" : "1:05",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Tum Mile", "Anushka Gautam", "Cover"]
         },
