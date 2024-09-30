@@ -1,11 +1,16 @@
 class Track extends Audio{
     constructor(name, author, src, thumbnail){
-        super();
+        super(src);
+        this.name = name;
+        this.author = author;
+        this.thumbnail = thumbnail;
+        this.isPlaying = this.paused? false : true;
+    }
+    update(name, author, src, thumbnail){
         this.name = name;
         this.author = author;
         this.src = src;
         this.thumbnail = thumbnail;
-        this.isPlaying = this.paused? false : true;
     }
 }
 
@@ -15,36 +20,39 @@ class Player{
     constructor(){
         this.currentSong = 0;
         this.songs = [] ;
-        this.audio = new Audio(); // document.getElementById("audio");
+        this.audio = new Audio();
         this.nextAudio = new Audio();
         this.playBtn = document.getElementById("play");
         this.nextBtn = document.getElementById("next");
         this.prevBtn = document.getElementById("prev");
         this.playList = document.getElementById("playlist");
-        this.currentSongName = document.getElementById("current-song");
-        this.currentAudio = {};
-        this.playBtn.addEventListener("click", () => this.play());
+        this.playBtn.addEventListener("click", () => this.playPause());
         this.nextBtn.addEventListener("click", () => this.next());
         this.prevBtn.addEventListener("click", () => this.prev());
         this.audio.addEventListener("ended", () => this.next());
-        this.progressBar = document.getElementById("audio-progress");
-        this.progressBar.value = 0;
         this.current_time = document.getElementById("current-time");
         this.current_duration = document.getElementById("current-duration");
         this.player_banner = document.getElementById("player-banner");
+        this.progressBar = document.getElementById("audio-progress");
+        this.playerTrack = {
+            banner : document.getElementById("player-banner"),
+            currentSong : document.getElementById("current-song"),
+            currentTime : document.getElementById("current-time"),
+            currentDuration : document.getElementById("current_duration"),
+        }
+        this.progressBar.value = this.audio.currentTime;
+
+        this.audio.onplaying = ()=>{this.playBtn.classList.replace("bx-play", "bx-pause");}
+        this.audio.onpause = ()=>{this.playBtn.classList.replace("bx-pause", "bx-play");}
 
         this.audio.addEventListener("timeupdate", () => {
             this.progressBar.value = this.audio.currentTime;
-            this.progressBar.max = this.audio.duration;
-            this.current_time.innerHTML = this.formatedTime(this.audio.currentTime) + " / " + this.formatedTime(this.audio.duration);
         });
         this.progressBar.addEventListener("change", () => {
             this.audio.currentTime = this.progressBar.value;
-            this.current_time.innerHTML = this.formatedTime(this.audio.currentTime) + " / " + this.formatedTime(this.audio.duration);
         });
         this.audio.onloadedmetadata = () => {
             this.progressBar.max = this.audio.duration;
-            this.current_time.innerHTML = this.formatedTime(this.audio.currentTime) + " / " + this.formatedTime(this.audio.duration);
             console.log("Loaded metadata: " + this.songs[this.currentSong].name);
         }
         this.audio.onloadeddata = () => {
@@ -53,6 +61,14 @@ class Player{
             this.nextAudio.load();
             console.log("Loaded data: " + this.songs[this.currentSong+1].name);
         }
+    }
+
+    changePlayerTrack(audioObj){
+        this.audio.src = audioObj.src;
+        this.playerTrack.banner.src = audioObj.thumbnail;
+        this.playerTrack.currentSong.innerText = audioObj.name;
+        // this.playerTrack.currentTime.innerText = "00:00";
+        this.playerTrack.currentDuration.innerText = audioObj.duration;
     }
 
     formatedTime(Seconds=null) {
@@ -84,38 +100,34 @@ class Player{
                 el.addEventListener("click", () => this.playSong(index));
                 this.playList.appendChild(el);
             });
-            this.currentAudio = this.songs[this.currentSong];
-            this.currentSongName.innerHTML = this.songs[this.currentSong].name;
             this.audio.src = this.songs[this.currentSong].src;
         });
     }
-    play(){
+    playPause(){
         if(this.audio.paused){
             this.audio.play()
             .then(this.playBtn.classList.replace("bx-play", "bx-pause"))
-            .then(this.current_time.innerHTML = this.formatedTime(this.audio.currentTime) + " / " + this.formatedTime(this.audio.duration))
             .then(console.log("Playing: " + this.songs[this.currentSong].name));
         }
-        else{this.audio.pause();this.playBtn.classList.replace("bx-pause", "bx-play");}
+        else if(!this.audio.paused){
+            this.audio.pause();
+            this.playBtn.classList.replace("bx-pause", "bx-play");}
     }
     next(){
         this.currentSong++;
         if(this.currentSong >= this.songs.length){this.currentSong = 0;}
-        this.audio = this.nextAudio;
-        this.audio.currentTime = 0;
-        this.player_banner.src = this.songs[this.currentSong].thumbnail;
-        this.currentSongName.innerHTML = this.songs[this.currentSong].name;
-        this.current_time.innerHTML = this.formatedTime(this.audio.currentTime) + " / " + this.formatedTime(this.audio.duration);
-        this.play();
+        this.progressBar.max = this.songs[this.currentSong].duration;
+        this.changePlayerTrack(this.songs[this.currentSong]);
+        this.playPause();
     }
     prev(){
         this.currentSong--;
         if(this.currentSong < 0){this.currentSong = this.songs.length - 1;}
-        this.play();
+        this.playPause();
     }
     playSong(index){
         this.currentSong = index;
-        this.play();
+        this.playPause();
     }
 }
 
