@@ -46,6 +46,7 @@ class Player{
         this.audio.onpause = ()=>{this.playBtn.classList.replace("bx-pause", "bx-play");}
 
         this.audio.addEventListener("timeupdate", () => {
+            this.current_time.innerText = this.formatedTime(this.audio.currentTime);
             this.progressBar.value = this.audio.currentTime;
         });
         this.progressBar.addEventListener("change", () => {
@@ -53,13 +54,11 @@ class Player{
         });
         this.audio.onloadedmetadata = () => {
             this.progressBar.max = this.audio.duration;
-            console.log("Loaded metadata: " + this.songs[this.currentSong].name);
         }
         this.audio.onloadeddata = () => {
             if(this.currentSong >= this.songs.length){this.currentSong = 0;}
             this.nextAudio.src = this.songs[this.currentSong].src;
             this.nextAudio.load();
-            console.log("Loaded data: " + this.songs[this.currentSong+1].name);
         }
     }
 
@@ -68,9 +67,36 @@ class Player{
         this.playerTrack.banner.src = audioObj.thumbnail;
         this.playerTrack.currentSong.innerText = audioObj.name;
         // this.playerTrack.currentTime.innerText = "00:00";
-        this.playerTrack.currentDuration.innerText = audioObj.duration;
+        // this.playerTrack.currentDuration.innerText = audioObj.duration;
     }
+    
 
+    playPause(){
+        if(this.audio.paused){
+            this.audio.play()
+            .then(this.playBtn.classList.replace("bx-play", "bx-pause"))
+            .then(console.log("Playing: " + this.songs[this.currentSong].name));
+        }
+        else if(!this.audio.paused){
+            this.audio.pause();
+            this.playBtn.classList.replace("bx-pause", "bx-play");}
+    }
+    next(){
+        this.currentSong++;
+        if(this.currentSong >= this.songs.length){this.currentSong = 0;}
+        this.progressBar.max = this.songs[this.currentSong].duration;
+        this.changePlayerTrack(this.songs[this.currentSong]);
+        setTimeout(()=>{this.playPause()}, 150);
+    }
+    prev(){
+        this.currentSong--;
+        if(this.currentSong < 0){this.currentSong = this.songs.length - 1;}
+        this.playPause();
+    }
+    playSong(index){
+        this.currentSong = index;
+    }
+    
     formatedTime(Seconds=null) {
         let totalSeconds = Seconds || this.audio.duration;
         if (isNaN(totalSeconds)) {return "00:00";}
@@ -80,7 +106,7 @@ class Player{
         if (hours > 0) {return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;} 
         else {return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;}
     }
-    
+
     render(){
         fetch("./static/js/audio.json")
         .then(response => response.json())
@@ -97,37 +123,15 @@ class Player{
                     </div>
                     <span class="float-right ml-auto">${song.duration}</span>
                     `
-                el.addEventListener("click", () => this.playSong(index));
+                el.addEventListener("click", () => {
+                    this.playSong(index);
+                    this.changePlayerTrack(this.songs[index]);
+                    this.current_time.innerText = "00:00";
+                });
                 this.playList.appendChild(el);
             });
             this.audio.src = this.songs[this.currentSong].src;
         });
-    }
-    playPause(){
-        if(this.audio.paused){
-            this.audio.play()
-            .then(this.playBtn.classList.replace("bx-play", "bx-pause"))
-            .then(console.log("Playing: " + this.songs[this.currentSong].name));
-        }
-        else if(!this.audio.paused){
-            this.audio.pause();
-            this.playBtn.classList.replace("bx-pause", "bx-play");}
-    }
-    next(){
-        this.currentSong++;
-        if(this.currentSong >= this.songs.length){this.currentSong = 0;}
-        this.progressBar.max = this.songs[this.currentSong].duration;
-        this.changePlayerTrack(this.songs[this.currentSong]);
-        this.playPause();
-    }
-    prev(){
-        this.currentSong--;
-        if(this.currentSong < 0){this.currentSong = this.songs.length - 1;}
-        this.playPause();
-    }
-    playSong(index){
-        this.currentSong = index;
-        this.playPause();
     }
 }
 
