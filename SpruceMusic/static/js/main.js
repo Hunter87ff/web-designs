@@ -60,6 +60,7 @@ class Player{
     }
 
     changePlayerTrack(audioObj){
+        this.playBtn.classList.replace("bx-pause", "bx-play");
         localStorage.setItem("currentSong", this.currentSong);
         this.audio.src = audioObj.src;
         this.playerTrack.banner.src = audioObj.thumbnail;
