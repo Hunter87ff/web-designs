@@ -1,65 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
-</head>
-<body class="bg-gray-700">
-    <audio src="static/audio/Baarish.mp3" controls></audio>
-    <script>
-        class Track extends Audio{
-            constructor(name, author, src, thumbnail){
-                super();
-                this.name = name;
-                this.author = author;
-                this.src = src;
-                this.thumbnail = thumbnail;
-            }
-        }
-        class Player{
-            constructor(){
-                this.tracks = [];
-                this.currentTrack = null;
-            }
-            addTrack(track){
-                this.tracks.push(track);
-            }
-            playTrack(track){
-                if(this.currentTrack){
-                    this.currentTrack.pause();
-                }
-                this.currentTrack = track;
-                this.currentTrack.play();
-            }
-            render(){
-                fetch("./static/js/audio.json")
-                .then(response => response.json())
-                .then(data => {
-                    this.songs = data;
-                    this.songs.forEach((song, index) => {
-                        let el = document.createElement("li");
-                        el.className = "audio-li  cursor-pointer font-mono text-white font-bold p-2 my-2 align-middle flex-row flex items-center";
-                        el.innerHTML = `
-                            <img src="${song.thumbnail}" class="rounded mr-2 aspect-square" alt="">
-                            <div class="track-info">
-                                <span class="">${song.name.slice(0,20)}${song.name.length>20?"...":""}</span><br>
-                                <span class="text-gray-400">${song.author}</span>
-                            </div>
-                            <span class="float-right ml-auto">${song.duration}</span>
-                            `
-                        el.addEventListener("click", () => this.playSong(index));
-                        this.playList.appendChild(el);
-                    });
-                    this.currentAudio = this.songs[this.currentSong];
-                    this.currentSongName.innerHTML = this.songs[this.currentSong].name;
-                    this.audio.src = this.songs[this.currentSong].src;
-                });
-    }
-        }
+<input type="file" id="fileInput" multiple webkitdirectory />
 
-
-    </script>
-</body>
-</html>
+<script>
+    document.getElementById('fileInput').addEventListener('change', function(event) {
+        const files = event.target.files;
+        for (let i = 0; i < files.length; i++) {
+            console.log(files[i].webkitRelativePath); // relative path of the file
+        }
+    });
+</script>

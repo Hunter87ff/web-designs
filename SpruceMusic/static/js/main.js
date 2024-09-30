@@ -1,3 +1,6 @@
+function sel(query){return document.querySelector(query);}
+
+
 class Track extends Audio{
     constructor(name, author, src, thumbnail){
         super(src);
@@ -18,10 +21,9 @@ class Track extends Audio{
 
 class Player{
     constructor(){
-        this.currentSong = 0;
-        this.songs = [] ;
+        this.currentSong = localStorage.getItem("currentSong") || 0;
+        this.songs = JSON.parse(localStorage.getItem("songs")) || [];
         this.audio = new Audio();
-        this.nextAudio = new Audio();
         this.playBtn = document.getElementById("play");
         this.nextBtn = document.getElementById("next");
         this.prevBtn = document.getElementById("prev");
@@ -55,23 +57,20 @@ class Player{
         this.audio.onloadedmetadata = () => {
             this.progressBar.max = this.audio.duration;
         }
-        this.audio.onloadeddata = () => {
-            if(this.currentSong >= this.songs.length){this.currentSong = 0;}
-            this.nextAudio.src = this.songs[this.currentSong].src;
-            this.nextAudio.load();
-        }
     }
 
     changePlayerTrack(audioObj){
+        localStorage.setItem("currentSong", this.currentSong);
         this.audio.src = audioObj.src;
         this.playerTrack.banner.src = audioObj.thumbnail;
-        this.playerTrack.currentSong.innerText = audioObj.name;
-        // this.playerTrack.currentTime.innerText = "00:00";
+        this.playerTrack.currentSong.innerText = audioObj.name.slice(0, 20) + (audioObj.name.length>20?"...":"");
+        this.playerTrack.currentTime.innerText = audioObj.duration;
         // this.playerTrack.currentDuration.innerText = audioObj.duration;
     }
     
 
     playPause(){
+        localStorage.setItem("currentSong", this.currentSong);
         if(this.audio.paused){
             this.audio.play()
             .then(this.playBtn.classList.replace("bx-play", "bx-pause"))
@@ -86,17 +85,14 @@ class Player{
         if(this.currentSong >= this.songs.length){this.currentSong = 0;}
         this.progressBar.max = this.songs[this.currentSong].duration;
         this.changePlayerTrack(this.songs[this.currentSong]);
-        setTimeout(()=>{this.playPause()}, 150);
+        setTimeout(()=>{this.playPause()}, 500);
     }
     prev(){
         this.currentSong--;
         if(this.currentSong < 0){this.currentSong = this.songs.length - 1;}
         this.playPause();
     }
-    playSong(index){
-        this.currentSong = index;
-    }
-    
+
     formatedTime(Seconds=null) {
         let totalSeconds = Seconds || this.audio.duration;
         if (isNaN(totalSeconds)) {return "00:00";}
@@ -112,6 +108,7 @@ class Player{
         .then(response => response.json())
         .then(data => {
             this.songs = data;
+            localStorage.setItem("songs", JSON.stringify(this.songs));
             this.songs.forEach((song, index) => {
                 let el = document.createElement("li");
                 el.className = "audio-li  cursor-pointer font-mono text-white font-bold p-2 my-2 align-middle flex-row flex items-center";
@@ -124,13 +121,12 @@ class Player{
                     <span class="float-right ml-auto">${song.duration}</span>
                     `
                 el.addEventListener("click", () => {
-                    this.playSong(index);
+                    this.currentSong = index;
                     this.changePlayerTrack(this.songs[index]);
-                    this.current_time.innerText = "00:00";
                 });
                 this.playList.appendChild(el);
             });
-            this.audio.src = this.songs[this.currentSong].src;
+            this.changePlayerTrack(this.songs[this.currentSong]);
         });
     }
 }

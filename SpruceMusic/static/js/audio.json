@@ -1,20 +1,5 @@
 [
-    {
-        "name" : "Baarish",
-        "author" : "Arijit Singh",
-        "src" : "static/audio/Baarish.mp3",
-        "duration" : "6:15",
-        "thumbnail" : "https://i.ytimg.com/vi/Qvd-I7lTecI/maxresdefault.jpg",
-        "tags" : ["Baarish", "Yaariyaan", "Arijit Singh"]
-    },
-    {
-        "name" : "Tum hi ho",
-        "author" : "Arijit Singh",
-        "src" : "https://www.pagalworld.com.co/files/download/id/16890",
-        "duration" : "4:24",
-        "thumbnail" : "https://www.pagalworld.us/_big/aashiqui-2-2013-250.jpg",
-        "tags" : ["Tum hi ho", "Aashiqui 2", "Arijit Singh"]
-    },
+
     {
         "name" : "Bhula Dena By Arijit Singh",
         "author" : "Arijit Singh",
@@ -24,11 +9,99 @@
         "tags" : ["Bhula Dena Mujhe", "Aashiqui 2", "Arijit Singh"]
     },
     {
+        "name" : "Baarish",
+        "author" : "Arijit Singh",
+        "src" : "static/audio/Baarish.mp3",
+        "duration" : "6:15",
+        "thumbnail" : "https://i.ytimg.com/vi/Qvd-I7lTecI/maxresdefault.jpg",
+        "tags" : ["Baarish", "Yaariyaan", "Arijit Singh"]
+    },
+    {
         "name":"Baatein Ye Kabhi Na",
         "author":"Arijit Singh",
         "src":"static/audio/Baatein Ye Kabhi Na.mp3",
         "duration":"4:49",
         "thumbnail":"https://i.ytimg.com/vi/Iu_DQmSZ830/hqdefault.jpg",
         "tags":["Baatein Ye Kabhi Na","Khamoshiyan","Arijit Singh"]
+    },
+    {
+        "name" : "Chaleya",
+        "author" : "Anushka Gautam",
+        "src" : "static/audio/Cover/Anushka/Chaleya.mp3",
+        "duration" : "3:00",
+        "thumbnail" : "static/img/thumbnail/anushka.jpg",
+        "tags" : ["Chaleya", "Anushka Gautam", "Cover"]
+    },
+    {
+        "name" : "Dekh Lo",
+        "author" : "Anushka Gautam",
+        "src" : "static/audio/Cover/Anushka/Dekh lo.mp3",
+        "duration" : "4:00",
+        "thumbnail" : "static/img/thumbnail/anushka.jpg",
+        "tags" : ["Dekh Lo", "Anushka Gautam", "Cover"]
+    },
+    {
+        "name" : "Dil Ibadat",
+        "author" : "Anushka Gautam",
+        "src" : "static/audio/Cover/Anushka/Dil ibadat.mp3",
+        "duration" : "4:30",
+        "thumbnail" : "static/img/thumbnail/anushka.jpg",
+        "tags" : ["Dil Ibadat", "Anushka Gautam", "Cover"]
+        },
+        {
+        "name" : "Husn",
+        "author" : "Anushka Gautam",
+        "src" : "static/audio/Cover/Anushka/Husn.mp3",
+        "duration" : "3:45",
+        "thumbnail" : "static/img/thumbnail/anushka.jpg",
+        "tags" : ["Husn", "Anushka Gautam", "Cover"]
+        },
+        {
+        "name" : "Phirta Rahoon",
+        "author" : "Anushka Gautam",
+        "src" : "static/audio/Cover/Anushka/phirta rahoon.m4a",
+        "duration" : "4:10",
+        "thumbnail" : "static/img/thumbnail/anushka.jpg",
+        "tags" : ["Phirta Rahoon", "Anushka Gautam", "Cover"]
+        },
+        {
+        "name" : "Sabse Pehle Hai Pyaar",
+        "author" : "Anushka Gautam",
+        "src" : "static/audio/Cover/Anushka/Sabse pehle hai pyaar.mp3",
+        "duration" : "3:50",
+        "thumbnail" : "static/img/thumbnail/anushka.jpg",
+        "tags" : ["Sabse Pehle Hai Pyaar", "Anushka Gautam", "Cover"]
+        },
+        {
+        "name" : "Saudebaazi",
+        "author" : "Anushka Gautam",
+        "src" : "static/audio/Cover/Anushka/Saudebaazi.mp3",
+        "duration" : "4:20",
+        "thumbnail" : "static/img/thumbnail/anushka.jpg",
+        "tags" : ["Saudebaazi", "Anushka Gautam", "Cover"]
+        },
+        {
+        "name" : "Tujh Ko Jo Paya",
+        "author" : "Anushka Gautam",
+        "src" : "static/audio/Cover/Anushka/Tujh ko jo paya.mp3",
+        "duration" : "4:00",
+        "thumbnail" : "static/img/thumbnail/anushka.jpg",
+        "tags" : ["Tujh Ko Jo Paya", "Anushka Gautam", "Cover"]
+        },
+        {
+        "name" : "Tum Mile",
+        "author" : "Anushka Gautam",
+        "src" : "static/audio/Cover/Anushka/Tum mile.mp3",
+        "duration" : "4:30",
+        "thumbnail" : "static/img/thumbnail/anushka.jpg",
+        "tags" : ["Tum Mile", "Anushka Gautam", "Cover"]
+        },
+    {
+        "name" : "Tum hi ho",
+        "author" : "Arijit Singh",
+        "src" : "https://www.pagalworld.com.co/files/download/id/16890",
+        "duration" : "4:24",
+        "thumbnail" : "https://www.pagalworld.us/_big/aashiqui-2-2013-250.jpg",
+        "tags" : ["Tum hi ho", "Aashiqui 2", "Arijit Singh"]
     }
 ]
