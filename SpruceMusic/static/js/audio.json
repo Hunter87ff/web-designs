@@ -14,5 +14,21 @@
         "duration" : "4:24",
         "thumbnail" : "https://www.pagalworld.us/_big/aashiqui-2-2013-250.jpg",
         "tags" : ["Tum hi ho", "Aashiqui 2", "Arijit Singh"]
+    },
+    {
+        "name" : "Bhula Dena By Arijit Singh",
+        "author" : "Arijit Singh",
+        "src" : "static/audio/Bhula Dena.mp3",
+        "duration" : "4:00",
+        "thumbnail" : "https://www.pagalworld.us/_big/aashiqui-2-2013-250.jpg",
+        "tags" : ["Bhula Dena Mujhe", "Aashiqui 2", "Arijit Singh"]
+    },
+    {
+        "name":"Baatein Ye Kabhi Na",
+        "author":"Arijit Singh",
+        "src":"static/audio/Baatein Ye Kabhi Na.mp3",
+        "duration":"4:49",
+        "thumbnail":"https://i.ytimg.com/vi/Iu_DQmSZ830/hqdefault.jpg",
+        "tags":["Baatein Ye Kabhi Na","Khamoshiyan","Arijit Singh"]
     }
 ]

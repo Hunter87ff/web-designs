@@ -48,10 +48,10 @@ class Player{
             console.log("Loaded metadata: " + this.songs[this.currentSong].name);
         }
         this.audio.onloadeddata = () => {
-            console.log("Loding next song");
             if(this.currentSong >= this.songs.length){this.currentSong = 0;}
             this.nextAudio.src = this.songs[this.currentSong].src;
             this.nextAudio.load();
+            console.log("Loaded data: " + this.songs[this.currentSong+1].name);
         }
     }
 
@@ -66,18 +66,17 @@ class Player{
     }
     
     render(){
-        // this.playList.innerHTML = "";
         fetch("./static/js/audio.json")
         .then(response => response.json())
         .then(data => {
             this.songs = data;
             this.songs.forEach((song, index) => {
                 let el = document.createElement("li");
-                el.className = "audio-li cursor-pointer font-mono text-white font-bold p-2 my-2 align-middle flex-row flex items-center";
+                el.className = "audio-li  cursor-pointer font-mono text-white font-bold p-2 my-2 align-middle flex-row flex items-center";
                 el.innerHTML = `
                     <img src="${song.thumbnail}" class="rounded mr-2 aspect-square" alt="">
                     <div class="track-info">
-                        <span class="">${song.name}</span><br>
+                        <span class="">${song.name.slice(0,20)}${song.name.length>20?"...":""}</span><br>
                         <span class="text-gray-400">${song.author}</span>
                     </div>
                     <span class="float-right ml-auto">${song.duration}</span>
