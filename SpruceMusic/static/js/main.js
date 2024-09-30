@@ -1,18 +1,29 @@
+class Track extends Audio{
+    constructor(name, author, src, thumbnail){
+        super();
+        this.name = name;
+        this.author = author;
+        this.src = src;
+        this.thumbnail = thumbnail;
+        this.isPlaying = this.paused? false : true;
+    }
+}
+
+
+
 class Player{
     constructor(){
+        this.currentSong = 0;
+        this.songs = [] ;
         this.audio = new Audio(); // document.getElementById("audio");
+        this.nextAudio = new Audio();
         this.playBtn = document.getElementById("play");
-        this.pauseBtn = document.getElementById("pause");
         this.nextBtn = document.getElementById("next");
         this.prevBtn = document.getElementById("prev");
         this.playList = document.getElementById("playlist");
-        this.currentSong = 0;
-        this.nextAudio = new Audio();
         this.currentSongName = document.getElementById("current-song");
-        this.songs = [] ;//load song data from audio.json file
         this.currentAudio = {};
         this.playBtn.addEventListener("click", () => this.play());
-        this.pauseBtn.addEventListener("click", () => this.pause());
         this.nextBtn.addEventListener("click", () => this.next());
         this.prevBtn.addEventListener("click", () => this.prev());
         this.audio.addEventListener("ended", () => this.next());
@@ -92,6 +103,7 @@ class Player{
         this.currentSong++;
         if(this.currentSong >= this.songs.length){this.currentSong = 0;}
         this.audio = this.nextAudio;
+        this.audio.currentTime = 0;
         this.player_banner.src = this.songs[this.currentSong].thumbnail;
         this.currentSongName.innerHTML = this.songs[this.currentSong].name;
         this.current_time.innerHTML = this.formatedTime(this.audio.currentTime) + " / " + this.formatedTime(this.audio.duration);
@@ -99,9 +111,7 @@ class Player{
     }
     prev(){
         this.currentSong--;
-        if(this.currentSong < 0){
-            this.currentSong = this.songs.length - 1;
-        }
+        if(this.currentSong < 0){this.currentSong = this.songs.length - 1;}
         this.play();
     }
     playSong(index){
