@@ -95,13 +95,5 @@
         "duration" : "1:05",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Tum Mile", "Anushka Gautam", "Cover"]
-        },
-    {
-        "name" : "Tum hi ho",
-        "author" : "Arijit Singh",
-        "src" : "https://www.pagalworld.com.co/files/download/id/16890",
-        "duration" : "4:24",
-        "thumbnail" : "https://www.pagalworld.us/_big/aashiqui-2-2013-250.jpg",
-        "tags" : ["Tum hi ho", "Aashiqui 2", "Arijit Singh"]
-    }
+        }
 ]
