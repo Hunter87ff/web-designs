@@ -4,7 +4,7 @@
     document.getElementById('fileInput').addEventListener('change', function(event) {
         const files = event.target.files;
         for (let i = 0; i < files.length; i++) {
-            console.log(files[i].webkitRelativePath); // relative path of the file
+            console.log(files[i].webkitRelativePath);
         }
     });
 </script>
