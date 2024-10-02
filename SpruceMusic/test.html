@@ -27,12 +27,18 @@
         .audio-li:hover{background-color: #4a5568;}
         #audio-progress{ height: 5px;background-color: #2d3748;}
         .hidden{display: none!important;}
+        .search{width: 20%; border-radius: 20px; background-color: #2d3748; color: white; border: none;
+        transition: 0.5s; padding: 5px ;}
+        .search:focus{width: 40%; transition: 0.5s;}
+        .mini-player:focus{height: 50vh;}
+
     </style>
 </head>
 <body class="bg-gray-800">
-    <div class="header fixed top-0 w-full z-40">
-        <div class="logo bg-gray-900 p-4">
+    <div class="header fixed top-0 w-full z-40 ">
+        <div class="logo bg-gray-900 p-2 flex flex-row ">
             <h2 class="logo-text text-white font-bold">Spruce Player</h2>
+                <input class="search ml-auto rounded-full w-24" type="text" placeholder=" Search Track">
         </div>
     </div>
     <div class="main pt-12 h-screen">
@@ -40,7 +46,7 @@
             <ul id="audio-ul"></ul>
         </div>
 
-        <div class="mini-player cursor-pointer  bottom-0 fixed w-full bg-gray-600">
+        <div class="mini-player cursor-pointer bottom-0 fixed w-full bg-gray-600">
             <div class="controls align-middle items-center flex-row flex bg-gray-600 p-2">
                 <img  id="player-banner" class="rounded mr-2 aspect-square" alt="">
                 <div class="player-info">

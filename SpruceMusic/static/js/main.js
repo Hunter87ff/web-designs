@@ -21,6 +21,7 @@ class Track extends Audio{
 
 class Player{
     constructor(){
+        this.render();
         this.currentSong = localStorage.getItem("currentSong") || 0;
         this.songs = JSON.parse(localStorage.getItem("songs")) || [];
         this.audio = new Audio();
@@ -136,7 +137,7 @@ class Player{
 }
 
 let player = new Player();
-player.render();
+
 window.onload = () => {
     player.audio.currentTime = localStorage.getItem("currentTime") || 0;
     player.current_time.innerText = player.formatedTime();

@@ -47,53 +47,109 @@
         "duration" : "0:58",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Dil Ibadat", "Anushka Gautam", "Cover"]
-        },
-        {
+    },
+    {
         "name" : "Husn",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Husn.mp3",
         "duration" : "0:54",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Husn", "Anushka Gautam", "Cover"]
-        },
-        {
+    },
+    {
         "name" : "Phirta Rahoon",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/phirta rahoon.m4a",
         "duration" : "0:56",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Phirta Rahoon", "Anushka Gautam", "Cover"]
-        },
-        {
+    },
+    {
+        "name" : "Laaree Chootee",
+        "author" : "Prairna Raina",
+        "src" : "static/audio/Cover/Anushka/Laaree Chootee.mp3",
+        "duration" : "1:00",
+        "thumbnail" : "static/img/thumbnail/prairna.jpg",
+        "tags" : ["Laaree Chootee", "Prairna Raina", "Cover"]
+    },    
+    {
+            "name" : "Mujhe Peene Do",
+            "author" : "Prairna Raina",
+            "src" : "static/audio/Cover/Prairna/Mujhe peene do.mp3",
+            "duration" : "1:10",
+            "thumbnail" : "static/img/thumbnail/prairna.jpg",
+            "tags" : ["Mujhe Peene Do", "Prairna Raina", "Cover"]
+    },
+    {
+            "name" : "O Re Piya",
+            "author" : "Prairna Raina",
+            "src" : "static/audio/Cover/Prairna/O re piya.mp3",
+            "duration" : "1:20",
+            "thumbnail" : "static/img/thumbnail/prairna.jpg",
+            "tags" : ["O Re Piya", "Prairna Raina", "Cover"]
+    },
+    {
+            "name" : "Pee Loon",
+            "author" : "Prairna Raina",
+            "src" : "static/audio/Cover/Prairna/Pee Loon.mp3",
+            "duration" : "1:30",
+            "thumbnail" : "static/img/thumbnail/prairna.jpg",
+            "tags" : ["Pee Loon", "Prairna Raina", "Cover"]
+    },
+    {
+            "name" : "Tere Hawale",
+            "author" : "Prairna Raina",
+            "src" : "static/audio/Cover/Prairna/Tere hawale.mp3",
+            "duration" : "1:40",
+            "thumbnail" : "static/img/thumbnail/prairna.jpg",
+            "tags" : ["Tere Hawale", "Prairna Raina", "Cover"]
+    },
+    {
+            "name" : "Tujhe Bhula Diya",
+            "author" : "Prairna Raina",
+            "src" : "static/audio/Cover/Prairna/Tujhe bhula diya.mp3",
+            "duration" : "1:50",
+            "thumbnail" : "static/img/thumbnail/prairna.jpg",
+            "tags" : ["Tujhe Bhula Diya", "Prairna Raina", "Cover"]
+    },
+    {
+            "name" : "Uska Hi Banana",
+            "author" : "Prairna Raina",
+            "src" : "static/audio/Cover/Prairna/Uska hi banana.mp3",
+            "duration" : "2:00",
+            "thumbnail" : "static/img/thumbnail/prairna.jpg",
+            "tags" : ["Uska Hi Banana", "Prairna Raina", "Cover"]
+    },
+    {
         "name" : "Sabse Pehle Hai Pyaar",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Sabse pehle hai pyaar.mp3",
         "duration" : "0:48",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Sabse Pehle Hai Pyaar", "Anushka Gautam", "Cover"]
-        },
-        {
+    },
+    {
         "name" : "Saudebaazi",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Saudebaazi.mp3",
         "duration" : "1:00",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Saudebaazi", "Anushka Gautam", "Cover"]
-        },
-        {
+    },
+    {
         "name" : "Tujh Ko Jo Paya",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Tujh ko jo paya.mp3",
         "duration" : "1:29",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Tujh Ko Jo Paya", "Anushka Gautam", "Cover"]
-        },
-        {
+    },
+    {
         "name" : "Tum Mile",
         "author" : "Anushka Gautam",
         "src" : "static/audio/Cover/Anushka/Tum mile.mp3",
         "duration" : "1:05",
         "thumbnail" : "static/img/thumbnail/anushka.jpg",
         "tags" : ["Tum Mile", "Anushka Gautam", "Cover"]
-        }
+    }
 ]
