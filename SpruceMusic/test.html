@@ -45,28 +45,29 @@
         </div>
       
         <div class="tabs__content pt-10">
-          <div class="tabs__section">
-            <div class="main h-screen">
-                <div class="audio-list pb-20" id="playlist">
-                    <ul id="audio-ul"></ul>
-                </div>
-        
-                <div class="mini-player cursor-pointer  bottom-0 fixed w-full bg-gray-600 rounded">
-                    <div class="controls align-middle items-center flex-row flex bg-gray-600 p-2 relative">
-                        <img  id="player-banner" class="rounded mr-2 aspect-square" alt="">
-                        <div class="player-info">
-                            <span class="text-white font-bold" id="current-song"></span>
-                            <br>
-                            <span class="text-gray-400" id="current-time"></span>
-                            <span id="current_duration"></span> 
+            <div class="tabs__section">
+                    <div class="main h-screen">
+                        <div class="audio-list pb-20" id="playlist">
+                            <ul id="audio-ul"></ul>
                         </div>
-                        <div class="control-btns " style="float: right;">
-                            <i id="prev" class='bx bx-skip-previous bx-md text-white border rounded-full ml-2 hidden'></i>
-                            <i id="play" class='bx bx-play bx-md text-white border rounded-full ml-2 cursor-pointer'></i>
-                            <i id="next" aria-disabled="true"  class='bx bx-skip-next bx-md text-white border rounded-full ml-2'></i>
+            
+                        <div class="mini-player cursor-pointer  bottom-0 fixed w-full bg-gray-600 rounded">
+                            <div class="controls align-middle items-center flex-row flex bg-gray-600 p-2 relative">
+                                <img  id="player-banner" class="rounded mr-2 aspect-square" alt="">
+                                <div class="player-info">
+                                    <span class="text-white font-bold" id="current-song"></span>
+                                    <br>
+                                    <span class="text-gray-400" id="current-time"></span>
+                                    <span id="current_duration"></span> 
+                                </div>
+                            <div class="control-btns ml-auto" style="float: right;">
+                                <i id="prev" class='bx bx-skip-previous bx-md text-white border rounded-full ml-2 hidden'></i>
+                                <i id="play" class='bx bx-play bx-md text-white border rounded-full ml-2 cursor-pointer'></i>
+                                <i id="next" aria-disabled="true"  class='bx bx-skip-next bx-md text-white border rounded-full ml-2'></i>
+                            </div>
                         </div>
+                        <input type="range" name="" id="audio-progress" class=" w-full">
                     </div>
-                    <input type="range" name="" id="audio-progress" class=" w-full">
                 </div>
             </div>
           </div>
