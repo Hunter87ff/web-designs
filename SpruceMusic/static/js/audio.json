@@ -1,155 +1,165 @@
 [
-
     {
-        "name" : "Bhula Dena By Arijit Singh",
-        "author" : "Arijit Singh",
-        "src" : "static/audio/Bhula Dena.mp3",
-        "duration" : "4:00",
-        "thumbnail" : "https://www.pagalworld.us/_big/aashiqui-2-2013-250.jpg",
-        "tags" : ["Bhula Dena Mujhe", "Aashiqui 2", "Arijit Singh"]
+        "id": "a1b2c3",
+        "name": "Baarish",
+        "author": "Arijit Singh",
+        "src": "static/audio/Baarish.mp3",
+        "duration": "6:15",
+        "thumbnail": "https://i.ytimg.com/vi/Qvd-I7lTecI/maxresdefault.jpg",
+        "tags": ["Baarish", "Yaariyaan", "Arijit Singh"]
     },
     {
-        "name" : "Baarish",
-        "author" : "Arijit Singh",
-        "src" : "static/audio/Baarish.mp3",
-        "duration" : "6:15",
-        "thumbnail" : "https://i.ytimg.com/vi/Qvd-I7lTecI/maxresdefault.jpg",
-        "tags" : ["Baarish", "Yaariyaan", "Arijit Singh"]
+        "id": "d4e5f6",
+        "name": "Baatein Ye Kabhi Na",
+        "author": "Arijit Singh",
+        "src": "static/audio/Baatein Ye Kabhi Na.mp3",
+        "duration": "4:49",
+        "thumbnail": "https://i.ytimg.com/vi/Iu_DQmSZ830/hqdefault.jpg",
+        "tags": ["Baatein Ye Kabhi Na", "Khamoshiyan", "Arijit Singh"]
     },
     {
-        "name":"Baatein Ye Kabhi Na",
-        "author":"Arijit Singh",
-        "src":"static/audio/Baatein Ye Kabhi Na.mp3",
-        "duration":"4:49",
-        "thumbnail":"https://i.ytimg.com/vi/Iu_DQmSZ830/hqdefault.jpg",
-        "tags":["Baatein Ye Kabhi Na","Khamoshiyan","Arijit Singh"]
+        "id": "g7h8i9",
+        "name": "Chaleya",
+        "author": "Anushka Gautam",
+        "src": "static/audio/Cover/Anushka/Chaleya.mp3",
+        "duration": "0:44",
+        "thumbnail": "static/img/thumbnail/anushka.jpg",
+        "tags": ["Chaleya", "Anushka Gautam", "Cover", "Anushka", "Anushka"]
     },
     {
-        "name" : "Chaleya",
-        "author" : "Anushka Gautam",
-        "src" : "static/audio/Cover/Anushka/Chaleya.mp3",
-        "duration" : "0:44",
-        "thumbnail" : "static/img/thumbnail/anushka.jpg",
-        "tags" : ["Chaleya", "Anushka Gautam", "Cover"]
+        "id": "j1k2l3",
+        "name": "Dekh Lo",
+        "author": "Anushka Gautam",
+        "src": "static/audio/Cover/Anushka/Dekh lo.mp3",
+        "duration": "1:29",
+        "thumbnail": "static/img/thumbnail/anushka.jpg",
+        "tags": ["Dekh Lo", "Anushka Gautam", "Cover", "Anushka"]
     },
     {
-        "name" : "Dekh Lo",
-        "author" : "Anushka Gautam",
-        "src" : "static/audio/Cover/Anushka/Dekh lo.mp3",
-        "duration" : "1:29",
-        "thumbnail" : "static/img/thumbnail/anushka.jpg",
-        "tags" : ["Dekh Lo", "Anushka Gautam", "Cover"]
+        "id": "m4n5o6",
+        "name": "Dil Ibadat",
+        "author": "Anushka Gautam",
+        "src": "static/audio/Cover/Anushka/Dil ibadat.mp3",
+        "duration": "0:58",
+        "thumbnail": "static/img/thumbnail/anushka.jpg",
+        "tags": ["Dil Ibadat", "Anushka Gautam", "Cover", "Anushka"]
     },
     {
-        "name" : "Dil Ibadat",
-        "author" : "Anushka Gautam",
-        "src" : "static/audio/Cover/Anushka/Dil ibadat.mp3",
-        "duration" : "0:58",
-        "thumbnail" : "static/img/thumbnail/anushka.jpg",
-        "tags" : ["Dil Ibadat", "Anushka Gautam", "Cover"]
+        "id": "p7q8r9",
+        "name": "Husn",
+        "author": "Anushka Gautam",
+        "src": "static/audio/Cover/Anushka/Husn.mp3",
+        "duration": "0:54",
+        "thumbnail": "static/img/thumbnail/anushka.jpg",
+        "tags": ["Husn", "Anushka Gautam", "Cover", "Anushka"]
     },
     {
-        "name" : "Husn",
-        "author" : "Anushka Gautam",
-        "src" : "static/audio/Cover/Anushka/Husn.mp3",
-        "duration" : "0:54",
-        "thumbnail" : "static/img/thumbnail/anushka.jpg",
-        "tags" : ["Husn", "Anushka Gautam", "Cover"]
+        "id": "s1t2u3",
+        "name": "Phirta Rahoon",
+        "author": "Anushka Gautam",
+        "src": "static/audio/Cover/Anushka/phirta rahoon.m4a",
+        "duration": "0:56",
+        "thumbnail": "static/img/thumbnail/anushka.jpg",
+        "tags": ["Phirta Rahoon", "Anushka Gautam", "Cover", "Anushka"]
     },
     {
-        "name" : "Phirta Rahoon",
-        "author" : "Anushka Gautam",
-        "src" : "static/audio/Cover/Anushka/phirta rahoon.m4a",
-        "duration" : "0:56",
-        "thumbnail" : "static/img/thumbnail/anushka.jpg",
-        "tags" : ["Phirta Rahoon", "Anushka Gautam", "Cover"]
+        "id": "v4w5x6",
+        "name": "Laaree Chootee",
+        "author": "Prairna Raina",
+        "src": "static/audio/Cover/Prairna/Laaree Chootee.mp3",
+        "duration": "1:00",
+        "thumbnail": "static/img/thumbnail/prairna.jpg",
+        "tags": ["Laaree Chootee", "Prairna Raina", "Cover", "Prairna"]
     },
     {
-        "name" : "Laaree Chootee",
-        "author" : "Prairna Raina",
-        "src" : "static/audio/Cover/Anushka/Laaree Chootee.mp3",
-        "duration" : "1:00",
-        "thumbnail" : "static/img/thumbnail/prairna.jpg",
-        "tags" : ["Laaree Chootee", "Prairna Raina", "Cover"]
-    },    
-    {
-            "name" : "Mujhe Peene Do",
-            "author" : "Prairna Raina",
-            "src" : "static/audio/Cover/Prairna/Mujhe peene do.mp3",
-            "duration" : "1:10",
-            "thumbnail" : "static/img/thumbnail/prairna.jpg",
-            "tags" : ["Mujhe Peene Do", "Prairna Raina", "Cover"]
+        "id": "y7z8a9",
+        "name": "Mujhe Peene Do",
+        "author": "Prairna Raina",
+        "src": "static/audio/Cover/Prairna/Mujhe peene do.mp3",
+        "duration": "1:10",
+        "thumbnail": "static/img/thumbnail/prairna.jpg",
+        "tags": ["Mujhe Peene Do", "Prairna Raina", "Cover", "Prairna"]
     },
     {
-            "name" : "O Re Piya",
-            "author" : "Prairna Raina",
-            "src" : "static/audio/Cover/Prairna/O re piya.mp3",
-            "duration" : "1:20",
-            "thumbnail" : "static/img/thumbnail/prairna.jpg",
-            "tags" : ["O Re Piya", "Prairna Raina", "Cover"]
+        "id": "b1c2d3",
+        "name": "O Re Piya",
+        "author": "Prairna Raina",
+        "src": "static/audio/Cover/Prairna/O re piya.mp3",
+        "duration": "1:20",
+        "thumbnail": "static/img/thumbnail/prairna.jpg",
+        "tags": ["O Re Piya", "Prairna Raina", "Cover", "Prairna"]
     },
     {
-            "name" : "Pee Loon",
-            "author" : "Prairna Raina",
-            "src" : "static/audio/Cover/Prairna/Pee Loon.mp3",
-            "duration" : "1:30",
-            "thumbnail" : "static/img/thumbnail/prairna.jpg",
-            "tags" : ["Pee Loon", "Prairna Raina", "Cover"]
+        "id": "e4f5g6",
+        "name": "Pee Loon",
+        "author": "Prairna Raina",
+        "src": "static/audio/Cover/Prairna/Pee Loon.mp3",
+        "duration": "1:30",
+        "thumbnail": "static/img/thumbnail/prairna.jpg",
+        "tags": ["Pee Loon", "Prairna Raina", "Cover", "Prairna"]
     },
     {
-            "name" : "Tere Hawale",
-            "author" : "Prairna Raina",
-            "src" : "static/audio/Cover/Prairna/Tere hawale.mp3",
-            "duration" : "1:40",
-            "thumbnail" : "static/img/thumbnail/prairna.jpg",
-            "tags" : ["Tere Hawale", "Prairna Raina", "Cover"]
+        "id": "h7i8j9",
+        "name": "Tere Hawale",
+        "author": "Prairna Raina",
+        "src": "static/audio/Cover/Prairna/Tere hawale.mp3",
+        "duration": "1:40",
+        "thumbnail": "static/img/thumbnail/prairna.jpg",
+        "tags": ["Tere Hawale", "Prairna Raina", "Cover", "Prairna"]
     },
     {
-            "name" : "Tujhe Bhula Diya",
-            "author" : "Prairna Raina",
-            "src" : "static/audio/Cover/Prairna/Tujhe bhula diya.mp3",
-            "duration" : "1:50",
-            "thumbnail" : "static/img/thumbnail/prairna.jpg",
-            "tags" : ["Tujhe Bhula Diya", "Prairna Raina", "Cover"]
+        "id": "k1l2m3",
+        "name": "Tujhe Bhula Diya",
+        "author": "Prairna Raina",
+        "src": "static/audio/Cover/Prairna/Tujhe bhula diya.mp3",
+        "duration": "1:50",
+        "thumbnail": "static/img/thumbnail/prairna.jpg",
+        "tags": ["Tujhe Bhula Diya", "Prairna Raina", "Cover", "Prairna"]
     },
     {
-            "name" : "Uska Hi Banana",
-            "author" : "Prairna Raina",
-            "src" : "static/audio/Cover/Prairna/Uska hi banana.mp3",
-            "duration" : "2:00",
-            "thumbnail" : "static/img/thumbnail/prairna.jpg",
-            "tags" : ["Uska Hi Banana", "Prairna Raina", "Cover"]
+        "id": "n4o5p6",
+        "name": "Uska Hi Banana",
+        "author": "Prairna Raina",
+        "src": "static/audio/Cover/Prairna/Uska hi banana.mp3",
+        "duration": "2:00",
+        "thumbnail": "static/img/thumbnail/prairna.jpg",
+        "tags": ["Uska Hi Banana", "Prairna Raina", "Cover", "Prairna"]
     },
     {
-        "name" : "Sabse Pehle Hai Pyaar",
-        "author" : "Anushka Gautam",
-        "src" : "static/audio/Cover/Anushka/Sabse pehle hai pyaar.mp3",
-        "duration" : "0:48",
-        "thumbnail" : "static/img/thumbnail/anushka.jpg",
-        "tags" : ["Sabse Pehle Hai Pyaar", "Anushka Gautam", "Cover"]
+        "id": "q7r8s9",
+        "name": "Sabse Pehle Hai Pyaar",
+        "author": "Anushka Gautam",
+        "src": "static/audio/Cover/Anushka/Sabse pehle hai pyaar.mp3",
+        "duration": "0:48",
+        "thumbnail": "static/img/thumbnail/anushka.jpg",
+        "tags": ["Sabse Pehle Hai Pyaar", "Anushka Gautam", "Cover", "Anushka"]
     },
     {
-        "name" : "Saudebaazi",
-        "author" : "Anushka Gautam",
-        "src" : "static/audio/Cover/Anushka/Saudebaazi.mp3",
-        "duration" : "1:00",
-        "thumbnail" : "static/img/thumbnail/anushka.jpg",
-        "tags" : ["Saudebaazi", "Anushka Gautam", "Cover"]
+        "id": "t1u2v3",
+        "name": "Saudebaazi",
+        "author": "Anushka Gautam",
+        "src": "static/audio/Cover/Anushka/Saudebaazi.mp3",
+        "duration": "1:00",
+        "thumbnail": "static/img/thumbnail/anushka.jpg",
+        "tags": ["Saudebaazi", "Anushka Gautam", "Cover", "Anushka"]
     },
     {
-        "name" : "Tujh Ko Jo Paya",
-        "author" : "Anushka Gautam",
-        "src" : "static/audio/Cover/Anushka/Tujh ko jo paya.mp3",
-        "duration" : "1:29",
-        "thumbnail" : "static/img/thumbnail/anushka.jpg",
-        "tags" : ["Tujh Ko Jo Paya", "Anushka Gautam", "Cover"]
+        "id": "w4x5y6",
+        "name": "Tujh Ko Jo Paya",
+        "author": "Anushka Gautam",
+        "src": "static/audio/Cover/Anushka/Tujh ko jo paya.mp3",
+        "duration": "1:29",
+        "thumbnail": "static/img/thumbnail/anushka.jpg",
+        "tags": ["Tujh Ko Jo Paya", "Anushka Gautam", "Cover", "Anushka"]
     },
     {
-        "name" : "Tum Mile",
-        "author" : "Anushka Gautam",
-        "src" : "static/audio/Cover/Anushka/Tum mile.mp3",
-        "duration" : "1:05",
-        "thumbnail" : "static/img/thumbnail/anushka.jpg",
-        "tags" : ["Tum Mile", "Anushka Gautam", "Cover"]
+        "id": "z7a8b9",
+        "name": "Tum Mile",
+        "author": "Anushka Gautam",
+        "src": "static/audio/Cover/Anushka/Tum mile.mp3",
+        "duration": "1:05",
+        "thumbnail": "static/img/thumbnail/anushka.jpg",
+        "tags": ["Tum Mile", "Anushka Gautam", "Cover", "Anushka"]
     }
+
 ]

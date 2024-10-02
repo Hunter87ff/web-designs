@@ -59,6 +59,28 @@ class Player{
         this.audio.onloadedmetadata = () => {
             this.progressBar.max = this.audio.duration;
         }
+        document.getElementById("search").onchange = (e) => {
+            console.log(e.target.value);
+        }
+    }
+
+    matchKeyword(query, keywords){
+        let match = 0;
+        keywords.forEach(keyword => {
+            if(query.includes(keyword)){
+                match++;
+            }
+        });
+        return match;
+    }
+
+    findTrack(query){
+        let results = [];
+        this.songs.forEach(song => {
+            let match = this.matchKeyword(query, song.tags);
+            if(match > 0){results.push({song, match});}
+        });
+        return results.length>0? results : null;
     }
 
     changePlayerTrack(audioObj){
@@ -75,7 +97,7 @@ class Player{
 
     playPause(){
         localStorage.setItem("currentSong", this.currentSong);
-        document.title=this.songs[this.currentSong].name;
+        document.title=this.songs[this.currentSong].name + " by " + this.songs[this.currentSong].author;
         if(this.audio.paused){
             this.audio.play()
             .then(this.playBtn.classList.replace("bx-play", "bx-pause"))
@@ -137,7 +159,7 @@ class Player{
 }
 
 let player = new Player();
-
+// console.log(player.findTrack("Prairna")?.map(track => track.song.name));
 window.onload = () => {
     player.audio.currentTime = localStorage.getItem("currentTime") || 0;
     player.current_time.innerText = player.formatedTime();
