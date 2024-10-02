@@ -120,8 +120,8 @@ class Player{
         this.playPause();
     }
 
-    formatedTime(Seconds=null) {
-        let totalSeconds = Seconds || this.audio.duration;
+    formatedTime(secondss=null) {
+        let totalSeconds = secondss || this.audio.duration;
         if (isNaN(totalSeconds)) {return "00:00";}
         let hours = Math.floor(totalSeconds / 3600);
         let minutes = Math.floor((totalSeconds % 3600) / 60);
