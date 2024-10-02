@@ -74,6 +74,7 @@ class Player{
 
     playPause(){
         localStorage.setItem("currentSong", this.currentSong);
+        document.title=this.songs[this.currentSong].name;
         if(this.audio.paused){
             this.audio.play()
             .then(this.playBtn.classList.replace("bx-play", "bx-pause"))
