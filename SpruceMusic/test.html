@@ -1,93 +1,64 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <title>Spruce Player</title>
+
+    <meta name="description" content="A music player built with HTML, CSS and JavaScript">
+    <meta property="og:image" content="favicon.png">
+    <meta name="keywords" content="music, player, spruce, html, css, javascript">
+    <meta name="author" content="github.com/unter87ff">
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://unpkg.com/tabs-slider@3.1.1/dist/css/tabs.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <style>
-        .header{font-family: Alata;}
-        .tabs__section{
-            height: 100vh;
-            --tw-bg-opacity: 1;
-            background-color: rgba(55,65,81,var(--tw-bg-opacity));
-            padding: 0px;
-        }
-        .tabs__bar div{background: gray;display: none; }
-        .hidden{display: none!important;}
+        body::-webkit-scrollbar{display: none;}
+        .logo-text{font-family: Alata; }
         .audio-li{height: 50px;position: relative;}
         .audio-li img{width: 40px; height: 40px;}
         .mini-player img {height: 40px;width: 40px;}
         .audio-li:hover{background-color: #4a5568;}
         #audio-progress{ height: 5px;background-color: #2d3748;}
-
+        .hidden{display: none!important;}
     </style>
-
 </head>
-<body class="overflow-y-hidden ">
-    <div class="header header fixed top-0 w-full z-40 bg-gray-800 h-10 text-white align-middle content-center">
-        <h2 class="align-middle">Spruce Player</h2>
-    </div>
-
-    <div class="tabs my-10 bg-gray-700 text-black">
-        <div class="tabs__bar-wrap">
-          <div class="tabs__bar">
-            <div class="tabs__controls md-ripple">View</div>
-            <div class="tabs__controls md-ripple">General</div>
-            <div class="tabs__controls md-ripple">Advanced</div>
-          </div>
+<body class="bg-gray-800">
+    <div class="header fixed top-0 w-full z-40">
+        <div class="logo bg-gray-900 p-4">
+            <h2 class="logo-text text-white font-bold">Spruce Player</h2>
         </div>
-      
-        <div class="tabs__content pt-10">
-            <div class="tabs__section">
-                    <div class="main h-screen">
-                        <div class="audio-list pb-20" id="playlist">
-                            <ul id="audio-ul"></ul>
-                        </div>
-            
-                        <div class="mini-player cursor-pointer  bottom-0 fixed w-full bg-gray-600 rounded">
-                            <div class="controls align-middle items-center flex-row flex bg-gray-600 p-2 relative">
-                                <img  id="player-banner" class="rounded mr-2 aspect-square" alt="">
-                                <div class="player-info">
-                                    <span class="text-white font-bold" id="current-song"></span>
-                                    <br>
-                                    <span class="text-gray-400" id="current-time"></span>
-                                    <span id="current_duration"></span> 
-                                </div>
-                            <div class="control-btns ml-auto" style="float: right;">
-                                <i id="prev" class='bx bx-skip-previous bx-md text-white border rounded-full ml-2 hidden'></i>
-                                <i id="play" class='bx bx-play bx-md text-white border rounded-full ml-2 cursor-pointer'></i>
-                                <i id="next" aria-disabled="true"  class='bx bx-skip-next bx-md text-white border rounded-full ml-2'></i>
-                            </div>
-                        </div>
-                        <input type="range" name="" id="audio-progress" class=" w-full">
-                    </div>
+    </div>
+    <div class="main pt-12 h-screen">
+        <div class="audio-list pb-20" id="playlist">
+            <ul id="audio-ul"></ul>
+        </div>
+
+        <div class="mini-player cursor-pointer  bottom-0 fixed w-full bg-gray-600">
+            <div class="controls align-middle items-center flex-row flex bg-gray-600 p-2">
+                <img  id="player-banner" class="rounded mr-2 aspect-square" alt="">
+                <div class="player-info">
+                    <span class="text-white font-bold" id="current-song">Baarish</span>
+                    <br>
+                    <span class="text-gray-400" id="current-time"></span>
+                    <span id="current_duration"></span> 
+                </div>
+                <div class="control-btns ml-auto">
+                    <i id="prev" class='bx bx-skip-previous bx-md text-white border rounded-full ml-2 hidden'></i>
+                    <i id="play" class='bx bx-play bx-md text-white border rounded-full ml-2 cursor-pointer'></i>
+                    <i id="next" aria-disabled="true"  class='bx bx-skip-next bx-md text-white border rounded-full ml-2'></i>
                 </div>
             </div>
-          </div>
-          <div class="tabs__section ">
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo eos, iusto laboriosam voluptatem at reiciendis vel, facilis repellendus totam excepturi earum saepe rerum ullam! Placeat ducimus, sapiente impedit autem minus aperiam tempora? Magnam aliquam explicabo vitae! Odit minima quaerat ullam molestiae quae, nobis at. Molestiae consectetur libero dolore at officiis.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sint adipisci voluptas eaque, veritatis, exercitationem et nam mollitia dolorem sit corporis dicta blanditiis soluta voluptatibus minima aliquid provident assumenda numquam unde aut error velit? Error ducimus quae dignissimos explicabo atque quia quidem laboriosam, tempore, eius totam vero dolorum provident magni repudiandae. Distinctio laudantium eligendi nobis cumque asperiores, qui architecto non error, iusto rerum, officia pariatur ullam praesentium. Soluta officiis amet assumenda alias dolorem cum aliquid id, dicta quisquam doloribus vitae voluptatem, magni nihil corporis sunt? Necessitatibus officia ab veritatis ipsa officiis laudantium cumque a inventore velit? Illum corporis eius quos?
-              <button>www</button>
-              <button disabled="disabled">www</button>
-            </div>
-          </div>
-          <div class="tabs__section bg-gray-700">
-            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus in et amet nemo laudantium quo vitae quaerat accusantium quam. Nam dolorem consequuntur impedit corrupti provident sed iure. A dicta quaerat reiciendis voluptatum enim vel, cupiditate, ex nulla omnis doloribus labore delectus itaque qui? Eos accusamus totam dolorem unde reiciendis cupiditate suscipit, veritatis cum blanditiis. Tempore provident perspiciatis itaque sed ducimus totam similique facilis quia, harum nesciunt cumque reiciendis nihil delectus expedita hic exercitationem dicta eius cupiditate, suscipit possimus. Quisquam perferendis tempore suscipit, voluptate numquam voluptatem ducimus nam officiis aliquam aspernatur commodi, laborum architecto atque soluta, repellat asperiores delectus accusantium veniam.
-              <a href="#0">Another link</a>
-            </div>
-          </div>
+            <input type="range" name="" id="audio-progress" class=" w-full">
         </div>
-      </div>
-    <script src="static/js/main.js"></script>
-    <script src="https://unpkg.com/tabs-slider@3.1.1/dist/js/tabsSlider.js"></script>
-    <script>new TabsSlider('.tabs');</script>
+
+    </div>
+    <script type="module" src="static/js/main.js"></script>
 </body>
 </html>

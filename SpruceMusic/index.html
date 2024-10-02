@@ -19,6 +19,7 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <style>
+        body::-webkit-scrollbar{display: none;}
         .logo-text{font-family: Alata; }
         .audio-li{height: 50px;position: relative;}
         .audio-li img{width: 40px; height: 40px;}
@@ -30,11 +31,11 @@
 </head>
 <body class="bg-gray-800">
     <div class="header fixed top-0 w-full z-40">
-        <div class="logo bg-gray-900 p-2">
+        <div class="logo bg-gray-900 p-4">
             <h2 class="logo-text text-white font-bold">Spruce Player</h2>
         </div>
     </div>
-    <div class="main pt-10 h-screen">
+    <div class="main pt-12 h-screen">
         <div class="audio-list pb-20" id="playlist">
             <ul id="audio-ul"></ul>
         </div>
@@ -56,6 +57,7 @@
             </div>
             <input type="range" name="" id="audio-progress" class=" w-full">
         </div>
+
     </div>
     <script type="module" src="static/js/main.js"></script>
 </body>
