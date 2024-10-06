@@ -1,0 +1,50 @@
+body::-webkit-scrollbar{display: none;}
+.logo-text{font-family: Alata; }
+.audio-li{height: 50px;position: relative;}
+.audio-li img{width: 40px; height: 40px;}
+.mini-player img {height: 40px;width: 40px;}
+.audio-li:hover{background-color: #4a5568;}
+#audio-progress{ height: 5px;background-color: #2d3748;}
+.hidden{display: none!important;}
+.search{width: 20%; border-radius: 20px; background-color: #2d3748; color: white; border: none;
+transition: 0.5s; padding: 5px ;}
+.search:focus{width: 40%; transition: 0.5s;}
+.mini-player:focus{height: 50vh;}
+.mini-player .title{display: none;}
+.main-player{
+    height: 100vh; 
+    margin-top: 100px;
+    z-index: 999;
+}
+.main-player .title{display: block;}
+.main-player .controls{
+    height: 80%;
+    position: relative;
+    display: flex; 
+    bottom: 0;
+    flex-direction: column;
+    align-content: center;
+    padding: 40% 10% ;
+}
+
+.main-player .controls .control-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-left: 0;
+}
+.main-player .controls .control-btns #prev{
+    order: 0;
+    display: inline-block!important;
+}
+.main-player input{
+    order: 0;
+}
+
+.main-player .controls .player-info{
+    margin-top: auto;
+}
+.context input{
+    width: 80%;
+}

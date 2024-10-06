@@ -22,9 +22,9 @@ class Track extends Audio{
 class Player{
     constructor(){
         this.render();
+        this.audio = new Audio();
         this.currentSong = localStorage.getItem("currentSong") || 0;
         this.songs = JSON.parse(localStorage.getItem("songs")) || [];
-        this.audio = new Audio();
         this.playBtn = document.getElementById("play");
         this.nextBtn = document.getElementById("next");
         this.prevBtn = document.getElementById("prev");
@@ -62,16 +62,13 @@ class Player{
         document.getElementById("search").onchange = (e) => {
             console.log(e.target.value);
         }
+        
     }
 
-    matchKeyword(query, keywords){
-        let match = 0;
-        keywords.forEach(keyword => {
-            if(query.includes(keyword)){
-                match++;
-            }
-        });
-        return match;
+    matchKeyword(query, keywords) {
+        const querySet = new Set(query.toLowerCase().split(" "));
+        const keywordSet = new Set(keywords.flatMap(phrase => phrase.split(" ")));
+        return [querySet].filter(word => keywordSet.has(word)).length;
     }
 
     findTrack(query){
@@ -88,7 +85,7 @@ class Player{
         localStorage.setItem("currentSong", this.currentSong);
         this.audio.src = audioObj.src;
         this.playerTrack.banner.src = audioObj.thumbnail;
-        this.playerTrack.currentSong.innerText = audioObj.name.slice(0, 10) + (audioObj.name.length>10?"...":"");
+        this.playerTrack.currentSong.innerText = audioObj.name.slice(0, 15) + (audioObj.name.length>10?"...":"");
         this.playerTrack.currentTime.innerText = audioObj.duration;
 
         // this.playerTrack.currentDuration.innerText = audioObj.duration;
@@ -142,7 +139,7 @@ class Player{
                 el.innerHTML = `
                     <img src="${song.thumbnail}" class="rounded mr-2 aspect-square" alt="">
                     <div class="track-info">
-                        <span class="">${song.name.slice(0,10)}${song.name.length>10?"...":""}</span><br>
+                        <span class="">${song.name.slice(0,15)}${song.name.length>15?"...":""}</span><br>
                         <span class="text-gray-400">${song.author}</span>
                     </div>
                     <span class="float-right ml-auto">${song.duration}</span>
@@ -159,7 +156,8 @@ class Player{
 }
 
 let player = new Player();
-// console.log(player.findTrack("Prairna")?.map(track => track.song.name));
+console.log(player.matchKeyword("o re piya", player.songs[9].tags));
+// console.log(player.findTrack("o re piya")?.map(track => track.song.name));
 window.onload = () => {
     player.audio.currentTime = localStorage.getItem("currentTime") || 0;
     player.current_time.innerText = player.formatedTime();
