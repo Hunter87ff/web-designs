@@ -48,3 +48,7 @@ transition: 0.5s; padding: 5px ;}
 .context input{
     width: 80%;
 }
+
+#search{
+    outline: none;
+}
