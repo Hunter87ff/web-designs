@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spruce Bot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-800">
+    <nav class="bg-gray-800 p-4 fixed w-full top-0 z-10 nav-bar ">
+        <div class="container mx-auto flex flex-wrap justify-between items-center ">
+            <a href="#" class="text-xl text-white font-bold logo-text">Spruce</a>
+            <button class="text-white block md:hidden" id="nav-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <div class="hidden w-full md:flex md:items-center md:w-auto" id="nav-content">
+                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-gray-300  mx-2">Home</a>
+                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-gray-300  mx-2">Invite</a>
+                <a href="#" class="block mt-4 md:inline-block md:mt-0 text-gray-300  mx-2">Dashboard</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section id="landing-page" class="h-screen flex flex-col items-center justify-center text-center px-4">
+            <div class="landing-content mb-auto">
+                <h1 class="text-5xl md:text-5xl uppercase ">
+                    <span>A Free and open source tool</span> <br>
+                    <span>For Real Esports Orgs.</span>
+                </h1>
+                <p class="text-center">
+                    Spruce is a free and open source tool to manage tournaments within discord. <br>
+                </p>
+            </div>
+        </section>
+    
+        <section id="event-info" class="h-screen flex flex-col bg-gray-900 justify-center">
+            <div class="content-container w-full p-4 h-full justify-center">
+                <div class="content-block">
+                    <h1 class="text-white text-4xl font-bold mb-4">Tournament Management</h1>
+                    <p class="">
+                        Spruce Provides the most flexible and easy interface to manage your tournaments.
+                        Comes with a variety of features to make your tournament management easier.
+                        spruce cometh with the first single command setup for your tournament.
+                    </p>
+                </div>
+                <img class="content-banner rounded" src="static/img/player.png" alt="">
+            </div>
+            
+            <div class="border h-full content-detailed grid grid-rows-2">
+                <div class="info-sm flex">
+                    <i class='bx bxs-trophy bg-yellow-400 text-yellow-600 rounded-full p-4 text-4xl '></i>
+                    <div class="info-sm-content border p-2">
+                        <h1 class="text-4xl">Fast & reliable</h1>
+                        <p>With Spruce, you can manage your tournaments with ease and speed. <br> 
+                            Spruce is built to be reliable and fast.</p>
+                    </div>
+                </div>
+
+
+                <div class="info-sm flex">
+                    <i class='bx bxs-trophy bg-yellow-400 text-yellow-600 rounded-full p-4 text-4xl '></i>
+                    <div class="info-sm-content border p-2">
+                        <h1 class="text-4xl">Fast & reliable</h1>
+                        <p>With Spruce, you can manage your tournaments with ease and speed. <br> 
+                            Spruce is built to be reliable and fast.</p>
+                    </div>
+                </div>
+
+
+                <div class="info-sm flex">
+                    <i class='bx bxs-trophy bg-yellow-400 text-yellow-600 rounded-full p-4 text-4xl '></i>
+                    <div class="info-sm-content border p-2">
+                        <h1 class="text-4xl">Fast & reliable</h1>
+                        <p>With Spruce, you can manage your tournaments with ease and speed. <br> 
+                            Spruce is built to be reliable and fast.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="event-sponsors" class="h-screen flex items-center justify-center text-center px-4">
+            <div>
+                <h2 class="text-3xl md:text-4xl mb-4">Event Sponsors</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-gray-900 p-4 mt-8">
+        <div class="container mx-auto text-center">
+            <div class="mb-4">
+                <h3 class="text-xl text-white">About the Event</h3>
+                <p class="text-gray-400">Join us for an exciting LAN event featuring top gamers from around the world. Compete, watch, and enjoy!</p>
+            </div>
+            <div class="mb-4">
+                <a href="/about" class="text-gray-300  mx-2">About</a>
+                <a href="/contact" class="text-gray-300  mx-2">Contact</a>
+                <a href="/validate" class="text-gray-300  mx-2">Validate</a>
+            </div>
+            <div class="mb-4">
+                <a href="https://twitter.com" class="text-gray-300  mx-2">Twitter</a>
+                <a href="https://facebook.com" class="text-gray-300  mx-2">Facebook</a>
+                <a href="https://instagram.com" class="text-gray-300  mx-2">Instagram</a>
+            </div>
+            <div class="text-gray-400">
+                &copy; 2024 BD Esports. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script src="static/js/script.js"></script>
+</body>
+</html>
